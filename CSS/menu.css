@@ -1,0 +1,412 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Jost',sans-serif;
+}
+
+/* Hero */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:360px;
+    background:url("../Images/foodmenu.jpg") center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:#fff;
+}
+
+.hero-content h1{
+    font-size:72px;
+    font-weight:600;
+    color: #ffffff;
+    letter-spacing:2px;
+    margin-bottom:18px;
+}
+
+.breadcrumb{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.breadcrumb a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.breadcrumb a:hover{
+    color:#d4af37;
+}
+
+.breadcrumb span{
+    color:#fff;
+}
+
+
+.menu-section{
+    background:#f8f3ed;
+    padding:90px 0;
+    font-family:'Jost',sans-serif;
+}
+
+.menu-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.menu-btn{
+    display:inline-block;
+    background:#E36C2F;
+    color:#fff;
+    padding:8px 20px;
+    border-radius:3px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.menu-header h2{
+    margin-top:20px;
+    font-size:40px;
+    font-weight:700;
+    color:#111111;
+}
+
+.menu-wrapper{
+    width:1180px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:60px;
+    position:relative;
+}
+
+.menu-wrapper::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:1px;
+    background:#3B2F2F;
+}
+
+.menu-column{
+    border-top: 1px solid #3B2F2F;
+    padding-top: 20px;
+}
+
+.column-title{
+    text-align: center;
+    padding-bottom: 18px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #3B2F2F;
+}
+
+.column-title span{
+    font-size:14px;
+    font-weight: 600;
+    letter-spacing:2px;
+    color:#111111;
+    position:relative;
+}
+
+.column-title span::before,
+.column-title span::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:38px;
+    height:1px;
+    background:#999;
+}
+
+.column-title span::before{
+    right:110%;
+}
+
+.column-title span::after{
+    left:110%;
+}
+
+.column-title h3{
+    margin-top:8px;
+    font-size:24px;
+    font-weight:700;
+    color:#111111;
+}
+
+.food-item{
+    display:flex;
+    align-items:flex-start;
+    gap:16px;
+    margin-bottom:24px;
+}
+
+.food-item img{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.food-info{
+    flex:1;
+}
+
+.food-head{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.food-head h4{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.food-head span{
+    color: #E36C2F;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+
+.food-head::after{
+    content: "";
+    flex: 1;
+    border-bottom: 1px dotted #3B2F2F;
+    order: 1;
+}
+
+.food-head span{
+    order: 2;
+}
+
+.food-head::after{
+    content:"";
+    flex:1;
+    border-bottom:1px dotted #bfbfbf;
+    margin:0 10px;
+}
+
+.food-head span{
+    color:#E36C2F;
+    font-weight:600;
+    font-size:20px;
+}
+
+.food-info p{
+    margin-top:6px;
+    color:#74787C;
+    font-size:16px;
+    line-height:1.5;
+}
+
+
+
+/* ===========================
+   BOOK TABLE
+=========================== */
+
+.booking-section{
+    background:#1c1c1c;
+    padding:80px 0;
+}
+
+.booking-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+}
+
+.booking-text{
+    min-width:260px;
+}
+
+.booking-text h2{
+    font-family:"Jost",sans-serif;
+    font-size:44px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.booking-text p{
+    color:#b9b9b9;
+    font-size:16px;
+    font-family:"Jost",sans-serif;
+}
+
+.booking-form{
+    flex:1;
+    display:flex;
+    gap:15px;
+}
+
+.booking-form select,
+.booking-form input{
+    flex:1;
+    height:58px;
+    background:transparent;
+    border:1px solid #777;
+    color:#fff;
+    padding:0 18px;
+    font-size:15px;
+    font-family:"Jost",sans-serif;
+    outline:none;
+}
+
+.booking-form select option{
+    color:#000;
+}
+
+.booking-form input[type="date"]::-webkit-calendar-picker-indicator,
+.booking-form input[type="time"]::-webkit-calendar-picker-indicator{
+    filter:invert(1);
+    cursor:pointer;
+}
+
+.booking-form button{
+    width:140px;
+    border:none;
+    background:#E97A34;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.booking-form button:hover{
+    background:#d56620;
+}
+
+
+
+/*=========================
+        CTA BANNER
+==========================*/
+
+.cta-banner{
+    position:relative;
+    padding:65px 0;
+    background:url("../Images/cta-bg.jpg") center center/cover no-repeat;
+}
+
+.cta-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.cta-container{
+    position:relative;
+    z-index:2;
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.cta-content{
+    color:#fff;
+}
+
+.cta-subtitle{
+    display:block;
+    font-family:'Jost',sans-serif;
+    font-size:16px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+
+.cta-content h2{
+    font-family:'Jost',sans-serif;
+    font-size:40px;
+    font-weight:700;
+    color:#ffffff;
+    margin:0;
+    line-height:1.2;
+}
+
+.cta-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:170px;
+    height:55px;
+
+    border:2px solid #fff;
+    color:#fff;
+    text-decoration:none;
+
+    font-family:'Jost',sans-serif;
+    font-size:16px;
+    font-weight:700;
+    text-transform:uppercase;
+
+    transition:.3s;
+}
+
+.cta-btn:hover{
+    background:#F47D3D;
+    border-color:#F47D3D;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
