@@ -1,0 +1,529 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Jost',sans-serif;
+}
+
+/* Hero */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:360px;
+    background:url("../Images/abouthero.jpg") center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:#fff;
+}
+
+.hero-content h1{
+    font-size:58px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:18px;
+}
+
+.breadcrumb{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    font-weight:500;
+    letter-spacing:1px;
+}
+
+.breadcrumb a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.breadcrumb a:hover{
+    color:#d4af37;
+}
+
+.breadcrumb span{
+    color:#fff;
+}
+
+
+/*=========================
+      ABOUT INTRO
+=========================*/
+
+.about-intro{
+    padding:100px 0;
+    background:#fff;
+}
+
+.about-intro .container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+}
+
+/* Images */
+.about-images{
+    position:relative;
+    width:520px;
+    height:470px;
+}
+
+/* Common */
+.about-images img{
+    position:absolute;
+    object-fit:cover;
+    border-radius:4px;
+}
+
+/* Top Left */
+.img1{
+    width:270px;
+    height:190px;
+    top:10px;
+    left:15px;
+    z-index:1;
+}
+
+/* Top Right (Smaller) */
+.img2{
+    width:150px;
+    height:140px;
+    top:0;
+    left: 295px;
+    z-index:1;
+}
+
+/* Bottom Left */
+.img3{
+    width:170px;
+    height:200px;
+    bottom:60px;
+    right: 30px;
+    left:0;
+    z-index:1;
+}
+
+
+.img4{
+    width:260px;
+    height:280px;
+    top:130px;
+    left:160px;
+    margin: 20px;
+    z-index:2;
+}
+
+/* Content */
+
+.about-text{
+    flex:1;
+}
+
+.about-tag{
+    display:inline-block;
+    background:#E36C2F;
+    color:#fff;
+    padding:6px 14px;
+    font-size:14px;
+    font-weight:600;
+    text-transform:uppercase;
+    border-radius:3px;
+    margin-bottom:18px;
+}
+
+.about-text h2{
+    font-size:40px;
+    font-weight: 700;
+    color:#111111;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#74787C;
+    line-height:1.8;
+    margin-bottom:30px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about-btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#E36C2F;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    font-size: 16px;
+    border-radius:4px;
+    transition:.3s;
+}
+
+.about-btn:hover{
+    background:#E36C2F;
+}
+
+
+/*======================
+      FEATURES
+=======================*/
+
+.features{
+    background:#FFF8F0;
+    padding:100px 0;
+}
+
+.features .features-container{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+/* Title Above Cards */
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.sub-title{
+    display:inline-block;
+    padding:6px 14px;
+    background:#F47D3D;
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    text-transform:uppercase;
+    border-radius:3px;
+    margin-bottom:15px;
+}
+
+.section-title h2{
+    font-size:40px;
+    font-weight:700;
+    color:#111111;
+    font-family:'Jost',sans-serif;
+}
+
+
+
+.features-wrapper{
+    display:flex;
+    justify-content:space-between;
+    gap:24px;
+}
+
+.feature-card{
+    width:270px;
+    background:#fff;
+    border-radius:6px;
+    padding:40px 28px;
+    text-align:center;
+    transition:.3s;
+}
+
+.features .section-title{
+    width:100%;
+    display:block;
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.features .sub-title{
+    display:inline-block;
+    padding:6px 14px;
+    background:#F47D3D;
+    color:#fff;
+    font-size:10px;
+    font-weight:600;
+    text-transform:uppercase;
+    border-radius:3px;
+    margin-bottom:15px;
+}
+
+
+.features .section-title h2{
+    margin-top:15px;
+    font-size:40px;
+    font-weight:700;
+    color:#111111;
+    font-family:'Jost',sans-serif;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.feature-icon{
+    width:58px;
+    height:58px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    background:#FFF4EC;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.feature-icon img{
+    width:24px;
+    height:24px;
+}
+
+.feature-card h3{
+    font-family:'Jost',sans-serif;
+    font-size:24px;
+    font-weight:500;
+    color:#111111;
+    margin-bottom:18px;
+}
+
+.feature-card p{
+    font-family:'Jost',sans-serif;
+    font-size:16px;
+    font-weight: 400;
+    color:#74787C;
+    line-height:1.8;
+    margin-bottom:28px;
+}
+
+.feature-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    width:145px;
+    height:42px;
+
+    border:1px solid #E36C2F;
+    border-radius:4px;
+
+    color:#E36C2F;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.feature-btn img{
+    width:12px;
+    transition:.3s;
+}
+
+.feature-btn:hover{
+    background:#F47D3D;
+    color:#fff;
+}
+
+.feature-btn:hover img{
+    filter:brightness(0) invert(1);
+    transform:translateX(4px);
+}
+
+
+/*======================
+      OUR CHEFS
+=======================*/
+
+.chefs{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.chefs .chefs-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Title */
+
+.chefs .section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.chefs .sub-title{
+    display:inline-block;
+    background:#E36C2F;
+    color:#fff;
+    padding:6px 14px;
+    font-size:14px;
+    font-weight:600;
+    text-transform:uppercase;
+    border-radius:3px;
+    margin-bottom:16px;
+}
+
+.chefs .section-title h2{
+    font-size:40px;
+    font-weight:700;
+    color:#111111;
+    font-family:'Jost',sans-serif;
+}
+
+/* Cards */
+
+.chefs-wrapper{
+    display:flex;
+    justify-content:space-between;
+    gap:28px;
+}
+
+.chef-card{
+    flex:1;
+    background:#fff;
+    border-right:1px solid #ededed;
+    text-align:center;
+    padding-bottom:15px;
+}
+
+.chef-card:last-child{
+    border-right:none;
+}
+
+/* Image */
+
+.chef-img{
+    width:90%;
+    height:250px;
+    overflow:hidden;
+}
+
+.chef-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.chef-card:hover .chef-img img{
+    transform:scale(1.05);
+}
+
+/* Content */
+
+.chef-content{
+    padding:18px 25px 0;
+}
+
+.chef-content h3{
+    font-size:22px;
+    font-weight:700;
+    color:#000000;
+    margin-bottom:12px;
+    font-family:'Jost',sans-serif;
+}
+
+.chef-content p{
+    font-size:16px;
+    font-weight: 400;
+    line-height:1.8;
+    color:#7a7a7a;
+    font-family:'DM Sans',sans-serif;
+}
+
+
+/*=========================
+        CTA BANNER
+==========================*/
+
+.cta-banner{
+    position:relative;
+    padding:65px 0;
+    background:url("../Images/cta-bg.jpg") center center/cover no-repeat;
+}
+
+.cta-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.cta-container{
+    position:relative;
+    z-index:2;
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.cta-content{
+    color:#fff;
+}
+
+.cta-subtitle{
+    display:block;
+    font-family:'Jost',sans-serif;
+    font-size:16px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+
+.cta-content h2{
+    font-family:'Jost',sans-serif;
+    font-size:40px;
+    font-weight:700;
+    color:#ffffff;
+    margin:0;
+    line-height:1.2;
+}
+
+.cta-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:170px;
+    height:55px;
+
+    border:2px solid #fff;
+    color:#fff;
+    text-decoration:none;
+
+    font-family:'Jost',sans-serif;
+    font-size:16px;
+    font-weight:700;
+    text-transform:uppercase;
+
+    transition:.3s;
+}
+
+.cta-btn:hover{
+    background:#F47D3D;
+    border-color:#F47D3D;
+}
+
