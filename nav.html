@@ -27,14 +27,34 @@
             <li><a href="reservation.html">RESERVATIONS</a></li>
             <li><a href="#">CONTACT</a></li>
             <li><a href="blog.html">BLOGS</a></li>
+            <li class="mobile-only-btn">
+                <a href="reservation.html" class="nav-btn">
+                    BOOK A TABLE
+                    <span>→</span>
+                </a>
+            </li>
         </ul>
 
-        <a href="reservation.html" class="nav-btn">
+        <a href="reservation.html" class="nav-btn desktop-btn">
             BOOK A TABLE
             <span>→</span>
         </a>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </nav>
 </header>
+
+
+<script>
+    document.getElementById('hamburger').addEventListener('click', function(){
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>

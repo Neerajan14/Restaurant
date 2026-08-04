@@ -21,8 +21,6 @@ header{
     align-items:center;
 }
 
-
-
 .nav-links{
     display:flex;
     align-items:center;
@@ -63,4 +61,56 @@ header{
 
 .nav-btn span{
     font-size:18px;
+}
+
+.hamburger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+.hamburger span{
+    width:26px;
+    height:2px;
+    background:#fff;
+}
+
+/* hide the li-wrapped mobile button on desktop */
+.mobile-only-btn{
+    display:none;
+}
+
+@media (max-width:768px){
+    header{
+        padding:16px 20px;
+        position:relative;
+        z-index:10;
+    }
+    .nav-links,
+    .desktop-btn{
+        display:none;
+    }
+    .hamburger{
+        display:flex;
+    }
+    .nav-links.active{
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#1b1b1b;
+        padding:20px;
+        gap:20px;
+        z-index:20;
+    }
+    .mobile-only-btn{
+        display:flex;
+        width:100%;
+    }
+    .mobile-only-btn .nav-btn{
+        width:100%;
+        justify-content:center;
+    }
 }

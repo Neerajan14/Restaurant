@@ -392,21 +392,364 @@ body{
     border-color:#F47D3D;
 }
 
+/* ==========================================
+   MOBILE RESPONSIVE STYLES (HERO BANNER)
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Hero Section Container */
+    .hero {
+        height: 240px;
+        padding: 0 20px;
+    }
+
+    /* Dark Overlay for Contrast */
+    .overlay {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    /* Main Hero Title */
+    .hero-content h1 {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        gap: 6px;
+    }
+
+    .breadcrumb a,
+    .breadcrumb span {
+        color: #ffffff;
+        opacity: 0.95;
+    }
+
+    /* Section Container */
+    .menu-section {
+        background-color: #fdf7ef; /* Cream background */
+        padding: 50px 20px;
+    }
+
+    /* Section Header */
+    .menu-header {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    /* Top Orange Pill Badge */
+    .menu-btn {
+        display: inline-block;
+        background-color: #e36c2f;
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 6px 18px;
+        border-radius: 20px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+    }
+
+    /* Main Section Title */
+    .menu-header h2 {
+        font-size: 22px;
+        font-weight: 800;
+        color: #111111;
+        margin-top: 14px;
+        line-height: 1.3;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    /* Wrapper: Single Column Stack */
+    .menu-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    /* Hide Desktop Center Divider Line */
+    .menu-wrapper::before {
+        display: none;
+    }
+
+    /* Column Reset */
+    .menu-column {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    /* Category Title Headers (STARTER MENU / MAIN DISHES) */
+    .column-title {
+        text-align: center;
+        margin-bottom: 25px;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .column-title span {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: #222222;
+    }
+
+    .column-title span::before,
+    .column-title span::after {
+        width: 25px; /* Shortened line decoration */
+    }
+
+    .column-title h3 {
+        font-size: 20px;
+        font-weight: 800;
+        color: #111111;
+        margin-top: 6px;
+        text-transform: uppercase;
+    }
+
+    /* Food Items */
+    .food-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 22px;
+    }
+
+    /* Round Thumbnails */
+    .food-item img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .food-info {
+        flex: 1;
+    }
+
+    .food-head {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+    }
+
+    .food-head h4 {
+        font-size: 15px;
+        font-weight: 700;
+        color: #111111;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    /* Dotted Leader Line */
+    .food-head::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px dotted #bbbbbb;
+        margin: 0 6px;
+    }
+
+    /* Orange Price */
+    .food-head span {
+        color: #e36c2f;
+        font-weight: 700;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    /* Dish Description Text */
+    .food-info p {
+        margin-top: 4px;
+        color: #777777;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    /* Section Container */
+    .booking-section {
+        background-color: #181818;
+        padding: 50px 20px;
+    }
+
+    /* Stack Text and Form Vertically */
+    .booking-container {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    /* Heading & Subtitle */
+    .booking-text {
+        text-align: center;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .booking-text h2 {
+        font-size: 26px;
+        font-weight: 800;
+        color: #ffffff;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+    }
+
+    .booking-text p {
+        font-size: 13px;
+        color: #b0b0b0;
+        line-height: 1.4;
+    }
+
+    /* Form Inputs Stack */
+    .booking-form {
+        width: 100%;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .booking-form select,
+    .booking-form input {
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid #555555;
+        border-radius: 2px;
+        color: #ffffff;
+        padding: 0 16px;
+        font-size: 14px;
+        font-family: 'Jost', sans-serif;
+        outline: none;
+        appearance: none; /* Uniform arrow styling */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    /* Custom Dropdown Arrow styling if needed */
+    .booking-form select,
+    .booking-form input {
+        background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+    }
+
+    .booking-form select option {
+        background-color: #222222;
+        color: #ffffff;
+    }
+
+    /* Input Placeholder Styling */
+    .booking-form input::placeholder {
+        color: #a0a0a0;
+    }
+
+    /* Full-Width Submit Button */
+    .booking-form button {
+        width: 100%;
+        height: 50px;
+        background-color: #e97a34;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        border: none;
+        border-radius: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .booking-form button:hover {
+        background-color: #d56620;
+    }
+
+    /* CTA Section Outer Container */
+    .cta-banner {
+        padding: 50px 20px;
+        background-position: center;
+    }
+
+    /* Stack Content Vertically */
+    .cta-container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 24px;
+        width: 100%;
+    }
+
+    .cta-content {
+        width: 100%;
+    }
+
+    /* Subtitle Tag Line */
+    .cta-subtitle {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: #ffffff;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    /* Main CTA Title */
+    .cta-content h2 {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 1.25;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+
+    /* Rounded Outline Button */
+    .cta-btn {
+        width: 100%;
+        max-width: 220px;
+        height: 48px;
+        border: 2px solid #ffffff;
+        border-radius: 8px;
+        background: transparent;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+        background-color: #E36C2F;
+        color: #ffffff;
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
