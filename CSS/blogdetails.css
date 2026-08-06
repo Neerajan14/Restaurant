@@ -1200,11 +1200,7 @@ body{
         transition: all 0.3s ease;
     }
 
-    .cta-btn:hover {
-        background-color: #ffffff;
-        color: #111111;
-    }
-
+   
 }
 
 

@@ -213,7 +213,7 @@ body{
     width:165px;
     height:46px;
     border:none;
-    background:#F17632;
+    background:#E36C2F;
     color:#fff;
     display:flex;
     justify-content:center;
@@ -420,11 +420,11 @@ body{
 
     height:50px;
 
-    border:1px solid #F17632;
+    border:1px solid #E36C2F;
 
     text-decoration:none;
 
-    color:#F17632;
+    color:#E36C2F;
 
     font-weight:600;
 
@@ -440,7 +440,7 @@ body{
 
 .phone-btn:hover{
 
-    background:#F17632;
+    background:#E36C2F;
 
     color:#fff;
 }
@@ -546,8 +546,8 @@ body{
 }
 
 .cta-btn:hover{
-    background:#F47D3D;
-    border-color:#F47D3D;
+    background:#E36C2F;
+    border-color:#E36C2F;
 }
 
 
@@ -604,7 +604,7 @@ body{
 
     /* Section Background */
     .reservation-section {
-        background-color: #fdf7ef; /* Off-white/cream background */
+        background-color: #fdf7ef; 
         padding: 40px 20px;
     }
 
@@ -661,7 +661,7 @@ body{
 
     .input-icon input:focus,
     .input-icon select:focus {
-        border-color: #f17632;
+        border-color: #E36C2F;
     }
 
     /* Input Icons */
@@ -714,7 +714,7 @@ body{
     .button-area button {
         width: 100%;
         height: 48px;
-        background-color: #f17632;
+        background-color: #E36C2F;
         color: #ffffff;
         border: none;
         border-radius: 2px;
@@ -737,9 +737,7 @@ body{
         filter: brightness(0) invert(1);
     }
 
-    .button-area button:hover {
-        background-color: #dc6424;
-    }
+   
 
     .opening-time-section {
         padding: 40px 20px;
@@ -769,7 +767,7 @@ body{
     /* Orange Pill Badge */
     .opening-tag {
         display: inline-block;
-        background-color: #f17632;
+        background-color: #E36C2F;
         color: #ffffff;
         font-size: 10px;
         font-weight: 700;
@@ -821,9 +819,9 @@ body{
         width: 100%;
         max-width: 260px;
         height: 44px;
-        border: 1px solid #f17632;
+        border: 1px solid #E36C2F;
         border-radius: 6px;
-        color: #f17632;
+        color: #E36C2F;
         font-size: 13px;
         font-weight: 700;
         display: inline-flex;
@@ -908,10 +906,7 @@ body{
         transition: all 0.3s ease;
     }
 
-    .cta-btn:hover {
-        background-color: #E36C2F;
-        color: #ffffff;
-    }
+   
 
 }
 

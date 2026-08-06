@@ -413,8 +413,8 @@ body{
 }
 
 .cta-btn:hover{
-    background:#F47D3D;
-    border-color:#F47D3D;
+    background:#E36C2F;
+    border-color:#E36C2F;
 }
 
 /* ==========================================
@@ -470,7 +470,7 @@ body{
 
     /* Section Container */
     .menu-section {
-        background-color: #fdf7ef; /* Cream background */
+        background-color: #fdf7ef; 
         padding: 50px 20px;
     }
 
@@ -483,7 +483,7 @@ body{
     /* Top Orange Pill Badge */
     .menu-btn {
         display: inline-block;
-        background-color: #e36c2f;
+        background-color: #E36C2F;
         color: #ffffff;
         font-size: 11px;
         font-weight: 700;
@@ -540,7 +540,7 @@ body{
 
     .column-title span::before,
     .column-title span::after {
-        width: 25px; /* Shortened line decoration */
+        width: 25px; 
     }
 
     .column-title h3 {
@@ -596,7 +596,7 @@ body{
 
     /* Orange Price */
     .food-head span {
-        color: #e36c2f;
+        color: #E36C2F;
         font-weight: 700;
         font-size: 14px;
         white-space: nowrap;
@@ -719,9 +719,7 @@ body{
     margin-top:8px;
 }
 
-.booking-form button:hover{
-    background:#d66327;
-}
+
    
 
     /* CTA Section Outer Container */

@@ -685,7 +685,7 @@
     padding:15px;
 
     border:none;
-    background:#C86A2B;
+    background:#E36C2F;
     color:#fff;
 
     font-size:15px;
@@ -933,7 +933,7 @@
     display:inline-flex;
     align-items:center;
     gap:8px;
-    color:#F47D3D;
+    color:#E36C2F;
     text-decoration:none;
     font-size:13px;
     font-weight:600;
@@ -947,7 +947,7 @@
 }
 
 .learn-more:hover{
-    color:#d86728;
+    color:#E36C2F;
 }
 
 .learn-more:hover img{
@@ -1054,8 +1054,8 @@
 }
 
 .cta-btn:hover{
-    background:#F47D3D;
-    border-color:#F47D3D;
+    background:#E36C2F;
+    border-color:#E36C2F;
 }
 
 
@@ -1238,7 +1238,7 @@
     }
 
     .food-tag {
-        background: #e56d38;
+        background: #E36C2F;
         color: #fff;
         padding: 6px 16px;
         font-size: 11px;
@@ -1278,8 +1278,8 @@
     }
 
     .food-filter button.active {
-        border-color: #e56d38;
-        color: #e56d38;
+        border-color: #E36C2F;
+        color: #E36C2F;
     }
 
     /* 2-Column Mobile Grid */
@@ -1350,7 +1350,7 @@
     .rating span {
         font-size: 11px;
         font-weight: 700;
-        color: #e56d38;
+        color: #E36C2F;
         margin-left: 3px;
     }
 
@@ -1358,13 +1358,13 @@
     .food-bottom h4 {
         font-size: 12px;
         font-weight: 700;
-        color: #e56d38;
+        color: #E36C2F;
         margin-top: 2px;
     }
 
     /* Section Background & Padding */
     .reservation {
-        background-color: #d96128; /* Warm orange background */
+        background-color: #E36C2F; 
         padding: 40px 20px;
         color: #ffffff;
     }
@@ -1460,7 +1460,7 @@
     }
 
     .reservation {
-        background-color: #d96128; /* Warm orange background */
+        background-color: #E36C2F; 
         padding: 30px 16px;
         width: 100%;
         box-sizing: border-box;
@@ -1552,7 +1552,7 @@
 
     .reservation-form input:focus,
     .reservation-form textarea:focus {
-        border-color: #d96128;
+        border-color: #E36C2F;
         background-color: #ffffff;
     }
 
@@ -1572,7 +1572,7 @@
     .reservation-form button[type="submit"] {
         width: 100% !important;
         box-sizing: border-box;
-        background-color: #d96128;
+        background-color: #E36C2F;
         color: #ffffff;
         padding: 14px;
         border: none;
@@ -1609,7 +1609,7 @@
 
     .testimonial-tag {
         display: inline-block;
-        background-color: #d96128;
+        background-color: #E36C2F;
         color: #ffffff;
         font-size: 10px;
         font-weight: 700;
@@ -1660,7 +1660,7 @@
     }
 
     .testimonial-card h3 {
-        color: #d96128;
+        color: #E36C2F;
         font-size: 15px;
         font-weight: 700;
         margin-bottom: 12px;
@@ -1697,7 +1697,7 @@
     }
 
     .testimonial-footer .client h4 {
-        color: #d96128;
+        color: #E36C2F;
         font-size: 12px;
         font-weight: 700;
         margin-bottom: 2px;
@@ -1740,7 +1740,7 @@
 
     .news-tag {
         display: inline-block;
-        background-color: #d96128;
+        background-color: #E36C2F;
         color: #ffffff;
         font-size: 10px;
         font-weight: 700;
@@ -1838,7 +1838,7 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        color: #d96128;
+        color: #E36C2F;
         font-size: 11px;
         font-weight: 700;
         text-decoration: none;
@@ -1853,10 +1853,7 @@
         transition: transform 0.2s ease;
     }
 
-    .learn-more:hover img {
-        transform: translateX(3px);
-    }
-
+   
     /* CTA Section Outer Container */
     .cta-banner {
         padding: 50px 20px;
@@ -1915,10 +1912,7 @@
         transition: all 0.3s ease;
     }
 
-    .cta-btn:hover {
-        background-color: #E36C2F;
-        color: #ffffff;
-    }
+   
 
 
 
