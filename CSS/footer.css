@@ -28,7 +28,7 @@ body{
     font-weight:600;
 }
 
-.logo{
+.footer-logo{
     font-size:30px;
     font-weight:400;
     font-style: regular;
@@ -39,7 +39,7 @@ body{
     color: #fff;
 }
 
-.logo span{
+.footer-logo span{
     color:#f47c35;
 }
 
@@ -182,7 +182,7 @@ body{
         grid-column:1 / -1;
     }
 
-    .logo{
+    .footer-logo{
         font-size:24px;
         margin-bottom:20px;
         padding-bottom:10px;
