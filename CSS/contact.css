@@ -212,9 +212,7 @@ CONTACT SECTION
     background:#d9630b;
 }
 
-/*==========================
- GOOGLE MAP
-==========================*/
+
 
 .map-section{
     background:#fff;
@@ -239,11 +237,6 @@ CONTACT SECTION
     display:block;
 }
 
-
-
-/*=========================
-        CTA BANNER
-==========================*/
 
 .cta-banner{
     position:relative;
@@ -354,13 +347,13 @@ CONTACT SECTION
         margin-top: 50px;
     }
 
-   /* CTA Section Outer Container */
+   
     .cta-banner {
         padding: 50px 20px;
         background-position: center;
     }
 
-    /* Stack Content Vertically */
+    
     .cta-container {
         flex-direction: column;
         align-items: flex-start;
@@ -373,7 +366,7 @@ CONTACT SECTION
         width: 100%;
     }
 
-    /* Subtitle Tag Line */
+   
     .cta-subtitle {
         font-size: 13px;
         font-weight: 700;
@@ -383,7 +376,7 @@ CONTACT SECTION
         text-transform: uppercase;
     }
 
-    /* Main CTA Title */
+    
     .cta-content h2 {
         font-size: 26px;
         font-weight: 800;
@@ -393,7 +386,7 @@ CONTACT SECTION
         text-transform: uppercase;
     }
 
-    /* Rounded Outline Button */
+   
     .cta-btn {
         width: 100%;
         max-width: 220px;

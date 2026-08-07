@@ -450,7 +450,7 @@ body{
     filter:brightness(0) invert(1);
 }
 
-/* Right Image */
+
 
 .opening-image{
 
@@ -559,13 +559,13 @@ body{
 
     /* Hero Section Container */
     .hero {
-        height: 240px; /* Adjusted height for mobile viewports */
+        height: 240px;
         padding: 0 20px;
     }
 
-    /* Dark Overlay for Text Readability */
+   
     .overlay {
-        background: rgba(0, 0, 0, 0.5); /* Matching dark overlay */
+        background: rgba(0, 0, 0, 0.5); 
     }
 
     .hero-content {
@@ -576,7 +576,7 @@ body{
         gap: 6px;
     }
 
-    /* Hero Title */
+    
     .hero-content h1 {
         font-size: 30px; 
         font-weight: 700;
@@ -587,7 +587,7 @@ body{
         text-align: center;
     }
 
-    /* Breadcrumbs */
+    
     .breadcrumb {
         font-size: 11px;
         font-weight: 600;
@@ -602,7 +602,7 @@ body{
         opacity: 0.95;
     }
 
-    /* Section Background */
+    
     .reservation-section {
         background-color: #fdf7ef; 
         padding: 40px 20px;
@@ -614,7 +614,7 @@ body{
         margin: 0 auto;
     }
 
-    /* Convert Grid to Single Column Stack */
+    
     .reservation-form {
         display: flex;
         flex-direction: column;
@@ -622,7 +622,7 @@ body{
         width: 100%;
     }
 
-    /* Label Styling */
+    
     .form-group label {
         font-size: 11px;
         font-weight: 700;
@@ -633,7 +633,7 @@ body{
         display: block;
     }
 
-    /* Input Base Styling */
+   
     .input-icon {
         position: relative;
         width: 100%;
@@ -664,7 +664,7 @@ body{
         border-color: #E36C2F;
     }
 
-    /* Input Icons */
+    
     .input-icon img {
         position: absolute;
         right: 14px;
@@ -676,7 +676,7 @@ body{
         pointer-events: none;
     }
 
-    /* Textarea Field */
+    
     .full {
         width: 100%;
     }
@@ -705,7 +705,7 @@ body{
         border-color: #f17632;
     }
 
-    /* Full-Width Mobile Submit Button */
+    
     .button-area {
         width: 100%;
         margin-top: 8px;
@@ -744,14 +744,14 @@ body{
         background-color: #fcfcfc;
     }
 
-    /* Stack card and image vertically */
+    
     .opening-container {
         flex-direction: column;
         gap: 24px;
         width: 100%;
     }
 
-    /* White Opening Time Card */
+    
     .opening-card {
         width: 100%;
         background: #ffffff;
@@ -764,7 +764,7 @@ body{
         align-items: center;
     }
 
-    /* Orange Pill Badge */
+    
     .opening-tag {
         display: inline-block;
         background-color: #E36C2F;
@@ -778,7 +778,7 @@ body{
         margin-bottom: 16px;
     }
 
-    /* Section Title */
+    
     .opening-card h2 {
         font-size: 22px;
         font-weight: 800;
@@ -787,7 +787,7 @@ body{
         letter-spacing: 0.5px;
     }
 
-    /* Opening Hours Table */
+    
     .opening-table {
         width: 100%;
         border: 1px solid #f0ebe6;
@@ -814,7 +814,7 @@ body{
         color: #111111;
     }
 
-    /* Phone Button */
+   
     .phone-btn {
         width: 100%;
         max-width: 260px;
@@ -836,7 +836,7 @@ body{
         height: 16px;
     }
 
-    /* Bottom Image Container */
+    
     .opening-image {
         width: 100%;
     }
@@ -848,13 +848,13 @@ body{
         border-radius: 12px;
     }
 
-   /* CTA Section Outer Container */
+   
     .cta-banner {
         padding: 50px 20px;
         background-position: center;
     }
 
-    /* Stack Content Vertically */
+    
     .cta-container {
         flex-direction: column;
         align-items: flex-start;
@@ -867,7 +867,7 @@ body{
         width: 100%;
     }
 
-    /* Subtitle Tag Line */
+    
     .cta-subtitle {
         font-size: 13px;
         font-weight: 700;
@@ -877,7 +877,7 @@ body{
         text-transform: uppercase;
     }
 
-    /* Main CTA Title */
+    
     .cta-content h2 {
         font-size: 26px;
         font-weight: 800;
@@ -887,7 +887,7 @@ body{
         text-transform: uppercase;
     }
 
-    /* Rounded Outline Button */
+    
     .cta-btn {
         width: 100%;
         max-width: 220px;

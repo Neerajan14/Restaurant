@@ -1256,12 +1256,12 @@
 
 
 
-    /* Section Padding */
+    
     .food-menu {
         padding: 40px 15px;
     }
 
-    /* Centered Header Layout */
+    
     .food-header {
         flex-direction: column;
         align-items: center;
@@ -1296,7 +1296,7 @@
         margin: 0;
     }
 
-    /* Centered Category Filter Buttons */
+    
     .food-filter {
         display: flex;
         justify-content: center;
@@ -1321,14 +1321,14 @@
         color: #E36C2F;
     }
 
-    /* 2-Column Mobile Grid */
+    
     .food-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
 
-    /* Food Card Tweaks */
+    
     .food-card {
         background: #ffffff;
         border-radius: 12px;
@@ -1361,7 +1361,7 @@
         line-height: 1.3;
     }
 
-    /* Hide description text on mobile view */
+    
     .food-card p {
         display: none;
     }
@@ -1374,7 +1374,7 @@
         margin-top: 4px;
     }
 
-    /* Rating Star Alignment */
+    
     .rating {
         display: flex;
         align-items: center;
@@ -1393,7 +1393,7 @@
         margin-left: 3px;
     }
 
-    /* Price Styling */
+    
     .food-bottom h4 {
         font-size: 12px;
         font-weight: 700;
@@ -1401,7 +1401,7 @@
         margin-top: 2px;
     }
 
-    /* Section Background & Padding */
+    
     .reservation {
         background-color: #E36C2F; 
         padding: 40px 20px;
@@ -1416,12 +1416,12 @@
         margin: 0 auto;
     }
 
-    /* Left Content (Text & Tags) */
+    
     .reservation-content {
         text-align: left;
     }
 
-    /* Dark Pill Badge */
+    
     .reservation-tag {
         display: inline-block;
         background-color: #1a1d20;
@@ -1514,7 +1514,7 @@
         gap: 25px;
     }
 
-    /* White Form Card */
+    
     .reservation-form {
         background: #ffffff;
         border-radius: 16px;
@@ -1533,7 +1533,7 @@
         letter-spacing: -0.3px;
     }
 
-    /* Stacked Form Fields */
+    
     .reservation-form form {
         display: flex;
         flex-direction: column;
@@ -1557,7 +1557,7 @@
         margin: 0;
     }
 
-    /* Field Labels */
+    
     .reservation-form label {
         font-size: 11px;
         font-weight: 700;
@@ -1567,7 +1567,7 @@
         text-align: left;
     }
 
-    /* Field Inputs */
+    
     .reservation-form input,
     .reservation-form textarea {
         width: 100% !important;
@@ -1595,7 +1595,7 @@
         background-color: #ffffff;
     }
 
-    /* Date Input Native Calendar Icon */
+    
     .reservation-form input[type="date"] {
         color: #718096;
         text-transform: uppercase;
@@ -1607,7 +1607,7 @@
         line-height: 1.4;
     }
 
-    /* Confirm Reservation Button */
+
     .reservation-form button[type="submit"] {
         width: 100% !important;
         box-sizing: border-box;
@@ -1628,7 +1628,7 @@
     
 
 
-    /* Section Dark Background & Spacing */
+
     .testimonial {
         background-color: #1a1d20;
         padding: 50px 20px;
@@ -1640,7 +1640,7 @@
         margin: 0 auto;
     }
 
-    /* Centered Header & Tag */
+    
     .testimonial-title {
         text-align: center;
         margin-bottom: 30px;
@@ -1669,12 +1669,12 @@
         margin: 0;
     }
 
-    /* Slider Container Adjustments */
+    
     .testimonial-slider {
         position: relative;
     }
 
-    /* Hide Navigation Buttons on Mobile */
+    
     .testimonial-slider .slider-btn {
         display: none;
     }
@@ -1686,7 +1686,7 @@
         gap: 15px;
     }
 
-    /* Testimonial Dark Card */
+    
     .testimonial-card {
         background-color: #24272c;
         border: 1px solid #383c43;
@@ -1713,7 +1713,7 @@
         font-style: normal;
     }
 
-    /* Card Footer & Divider */
+    
     .testimonial-footer {
         display: flex;
         align-items: center;
@@ -1748,7 +1748,7 @@
         display: block;
     }
 
-    /* Rating Stars */
+
     .testimonial-footer .stars {
         display: flex;
         align-items: center;
@@ -1760,7 +1760,7 @@
         height: 11px;
     }
 
-    /* Section Padding & White Background */
+    
     .news {
         background-color: #ffffff;
         padding: 50px 20px;
@@ -1771,7 +1771,7 @@
         margin: 0 auto;
     }
 
-    /* Centered Header & Tag */
+    
     .news-title {
         text-align: center;
         margin-bottom: 30px;
@@ -1800,14 +1800,14 @@
         margin: 0;
     }
 
-    /* Single Column Stacked Grid */
+   
     .news-grid {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    /* News Card Container */
+    
     .news-card {
         background: #fdfdfd;
         border-radius: 12px;
@@ -1818,7 +1818,7 @@
         flex-direction: column;
     }
 
-    /* Card Image */
+    
     .news-card img {
         width: 100%;
         height: 160px;
@@ -1832,7 +1832,7 @@
         gap: 8px;
     }
 
-    /* Author & Category Meta Info */
+    
     .news-meta {
         display: flex;
         align-items: center;
@@ -1855,7 +1855,7 @@
         object-fit: contain;
     }
 
-    /* News Title */
+    
     .news-content h3 {
         color: #1a202c;
         font-size: 14px;
@@ -1864,7 +1864,7 @@
         margin: 0;
     }
 
-    /* Optional Description Excerpt */
+   
     .news-content p {
         color: #718096;
         font-size: 11px;
@@ -1872,7 +1872,7 @@
         margin-top: 2px;
     }
 
-    /* Learn More Link */
+    
     .learn-more {
         display: inline-flex;
         align-items: center;
@@ -1893,13 +1893,13 @@
     }
 
    
-    /* CTA Section Outer Container */
+    
     .cta-banner {
         padding: 50px 20px;
         background-position: center;
     }
 
-    /* Stack Content Vertically */
+    
     .cta-container {
         flex-direction: column;
         align-items: flex-start;
@@ -1912,7 +1912,7 @@
         width: 100%;
     }
 
-    /* Subtitle Tag Line */
+    
     .cta-subtitle {
         font-size: 13px;
         font-weight: 700;
@@ -1922,7 +1922,7 @@
         text-transform: uppercase;
     }
 
-    /* Main CTA Title */
+    
     .cta-content h2 {
         font-size: 26px;
         font-weight: 800;
@@ -1932,7 +1932,7 @@
         text-transform: uppercase;
     }
 
-    /* Rounded Outline Button */
+    
     .cta-btn {
         width: 100%;
         max-width: 220px;

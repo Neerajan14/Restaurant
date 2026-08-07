@@ -8,8 +8,6 @@ body{
     font-family:'Jost',sans-serif;
 }
 
-/* Hero */
-
 .hero{
     position:relative;
     width:100%;
@@ -65,11 +63,6 @@ body{
     color:#fff;
 }
 
-
-/*=========================
-      ABOUT INTRO
-=========================*/
-
 .about-intro{
     padding:100px 0;
     background:#fff;
@@ -86,21 +79,19 @@ body{
     gap:70px;
 }
 
-/* Images */
 .about-images{
     position:relative;
     width:520px;
     height:470px;
 }
 
-/* Common */
 .about-images img{
     position:absolute;
     object-fit:cover;
     border-radius:4px;
 }
 
-/* Top Left */
+
 .img1{
     width:270px;
     height:190px;
@@ -109,7 +100,7 @@ body{
     z-index:1;
 }
 
-/* Top Right (Smaller) */
+
 .img2{
     width:150px;
     height:140px;
@@ -118,7 +109,7 @@ body{
     z-index:1;
 }
 
-/* Bottom Left */
+
 .img3{
     width:170px;
     height:200px;
@@ -137,8 +128,6 @@ body{
     margin: 20px;
     z-index:2;
 }
-
-/* Content */
 
 .about-text{
     flex:1;
@@ -188,11 +177,6 @@ body{
     background:#E36C2F;
 }
 
-
-/*======================
-      FEATURES
-=======================*/
-
 .features{
     background:#FFF8F0;
     padding:100px 0;
@@ -203,7 +187,6 @@ body{
     margin:0 auto;
 }
 
-/* Title Above Cards */
 .section-title{
     text-align:center;
     margin-bottom:60px;
@@ -346,11 +329,6 @@ body{
     transform:translateX(4px);
 }
 
-
-/*======================
-      OUR CHEFS
-=======================*/
-
 .chefs{
     padding:100px 0;
     background:#ffffff;
@@ -361,8 +339,6 @@ body{
     max-width:1200px;
     margin:auto;
 }
-
-/* Title */
 
 .chefs .section-title{
     text-align:center;
@@ -388,8 +364,6 @@ body{
     font-family:'Jost',sans-serif;
 }
 
-/* Cards */
-
 .chefs-wrapper{
     display:flex;
     justify-content:space-between;
@@ -408,8 +382,6 @@ body{
     border-right:none;
 }
 
-/* Image */
-
 .chef-img{
     width:90%;
     height:250px;
@@ -426,8 +398,6 @@ body{
 .chef-card:hover .chef-img img{
     transform:scale(1.05);
 }
-
-/* Content */
 
 .chef-content{
     padding:18px 25px 0;
@@ -450,9 +420,7 @@ body{
 }
 
 
-/*=========================
-        CTA BANNER
-==========================*/
+
 
 .cta-banner{
     position:relative;
@@ -527,19 +495,17 @@ body{
     border-color:#F47D3D;
 }
 
-/* ==========================================
-   MOBILE RESPONSIVE STYLES (HERO BANNER)
-   ========================================== */
+
 
 @media screen and (max-width: 768px) {
 
-    /* Hero Section Container */
+    
     .hero {
         height: 240px;
         padding: 0 20px;
     }
 
-    /* Dark Overlay for Contrast */
+    
     .overlay {
         background: rgba(0, 0, 0, 0.52);
     }
@@ -552,7 +518,7 @@ body{
         gap: 6px;
     }
 
-    /* Main Hero Title */
+    
     .hero-content h1 {
         font-size: 32px;
         font-weight: 800;
@@ -563,7 +529,7 @@ body{
         text-align: center;
     }
 
-    /* Breadcrumbs */
+    
     .breadcrumb {
         font-size: 11px;
         font-weight: 700;
@@ -578,7 +544,7 @@ body{
         opacity: 0.95;
     }
 
-    /* Section Container */
+    
     .about-intro {
         padding: 40px 20px;
         background-color: #ffffff;
@@ -590,7 +556,7 @@ body{
         width: 100%;
     }
 
-    /* Image Grid Collage */
+    
     .about-images {
         width: 100%;
         max-width: 360px;
@@ -605,7 +571,7 @@ body{
         border-radius: 8px;
     }
 
-    /* Top Left (Chef Image) */
+    
     .img1 {
         width: 53%;
         height: 180px;
@@ -613,7 +579,7 @@ body{
         left: 0;
     }
 
-    /* Top Right (Drink Image) */
+    
     .img2 {
         width: 43%;
         height: 120px;
@@ -622,7 +588,7 @@ body{
         left: auto;
     }
 
-    /* Bottom Left (Pasta Image) */
+    
     .img3 {
         width: 38%;
         height: 180px;
@@ -632,7 +598,7 @@ body{
         right: auto;
     }
 
-    /* Bottom Right / Overlapping Main (Pizza Image) */
+    
     .img4 {
         width: 58%;
         height: 240px;
@@ -642,13 +608,13 @@ body{
         margin: 0;
     }
 
-    /* Text Content */
+    
     .about-text {
         width: 100%;
         text-align: left;
     }
 
-    /* Orange Tag Badge */
+    
     .about-tag {
         display: inline-block;
         background-color: #e36c2f;
@@ -662,7 +628,7 @@ body{
         margin-bottom: 16px;
     }
 
-    /* Section Title */
+    
     .about-text h2 {
         font-size: 24px;
         font-weight: 800;
@@ -673,7 +639,7 @@ body{
         text-transform: uppercase;
     }
 
-    /* Paragraph Text */
+    
     .about-text p {
         font-size: 13px;
         color: #666666;
@@ -681,7 +647,7 @@ body{
         margin-bottom: 24px;
     }
 
-    /* Bottom Button */
+    
     .about-btn {
         display: block;
         width: 100%;
@@ -699,9 +665,9 @@ body{
         transition: background-color 0.3s ease;
     }
 
-    /* Section Container */
+    
     .features {
-        background-color: #fffaf4; /* Soft cream background */
+        background-color: #fffaf4; 
         padding: 50px 20px;
     }
 
@@ -711,14 +677,14 @@ body{
         margin: 0 auto;
     }
 
-    /* Header Title Block */
+   
     .features .section-title {
         text-align: center;
         margin-bottom: 35px;
         width: 100%;
     }
 
-    /* Orange Badge Pill */
+    
     .features .sub-title {
         display: inline-block;
         background-color: #e36c2f;
@@ -732,7 +698,7 @@ body{
         margin-bottom: 12px;
     }
 
-    /* Section Heading */
+    
     .features .section-title h2 {
         font-size: 22px;
         font-weight: 800;
@@ -742,14 +708,14 @@ body{
         text-transform: uppercase;
     }
 
-    /* Card Wrapper Vertical Stack */
+    
     .features-wrapper {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    /* Feature Cards */
+   
     .feature-card {
         width: 100%;
         background: #ffffff;
@@ -762,11 +728,11 @@ body{
         align-items: center;
     }
 
-    /* Circular Icon Badge */
+   
     .feature-icon {
         width: 54px;
         height: 54px;
-        background-color: #fff3eb; /* Light peach tint */
+        background-color: #fff3eb; 
         border-radius: 50%;
         margin: 0 auto 18px;
         display: flex;
@@ -779,7 +745,7 @@ body{
         height: 22px;
     }
 
-    /* Card Title */
+    
     .feature-card h3 {
         font-size: 18px;
         font-weight: 700;
@@ -787,7 +753,7 @@ body{
         margin-bottom: 12px;
     }
 
-    /* Card Paragraph Text */
+    
     .feature-card p {
         font-size: 13px;
         color: #666666;
@@ -795,7 +761,7 @@ body{
         margin-bottom: 22px;
     }
 
-    /* Outline Button */
+    
     .feature-btn {
         width: 100%;
         max-width: 180px;
@@ -820,7 +786,7 @@ body{
         width: 14px;
     }
 
-    /* Section Container */
+    
     .chefs {
         padding: 50px 20px;
         background-color: #ffffff;
@@ -832,13 +798,13 @@ body{
         margin: 0 auto;
     }
 
-    /* Header Title Block */
+    
     .chefs .section-title {
         text-align: center;
         margin-bottom: 35px;
     }
 
-    /* Orange Badge Pill */
+    
     .chefs .sub-title {
         display: inline-block;
         background-color: #e36c2f;
@@ -852,7 +818,7 @@ body{
         margin-bottom: 12px;
     }
 
-    /* Section Heading */
+    
     .chefs .section-title h2 {
         font-size: 22px;
         font-weight: 800;
@@ -862,14 +828,14 @@ body{
         text-transform: uppercase;
     }
 
-    /* Chefs Wrapper Vertical Stack */
+    
     .chefs-wrapper {
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
 
-    /* Chef Card Item */
+   
     .chef-card {
         width: 100%;
         background: transparent;
@@ -884,7 +850,7 @@ body{
         padding-bottom: 0;
     }
 
-    /* Image Wrapper & Photo */
+    
     .chef-img {
         width: 100%;
         height: 220px;
@@ -899,7 +865,7 @@ body{
         object-fit: cover;
     }
 
-    /* Text Content */
+    
     .chef-content {
         padding: 0 10px;
     }
@@ -921,13 +887,13 @@ body{
         max-width: 340px;
     }
 
-    /* CTA Section Outer Container */
+    
     .cta-banner {
         padding: 50px 20px;
         background-position: center;
     }
 
-    /* Stack Content Vertically */
+    
     .cta-container {
         flex-direction: column;
         align-items: flex-start;
@@ -940,7 +906,7 @@ body{
         width: 100%;
     }
 
-    /* Subtitle Tag Line */
+    
     .cta-subtitle {
         font-size: 13px;
         font-weight: 700;
@@ -950,7 +916,7 @@ body{
         text-transform: uppercase;
     }
 
-    /* Main CTA Title */
+    
     .cta-content h2 {
         font-size: 26px;
         font-weight: 800;
@@ -960,7 +926,7 @@ body{
         text-transform: uppercase;
     }
 
-    /* Rounded Outline Button */
+
     .cta-btn {
         width: 100%;
         max-width: 220px;

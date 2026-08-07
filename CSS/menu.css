@@ -230,10 +230,6 @@ body{
 }
 
 
-/* ===========================
-   BOOK TABLE - DESKTOP
-=========================== */
-
 .booking-section{
     background:#1b1b1b;
     padding:60px 0;
@@ -293,7 +289,7 @@ body{
     outline:none;
 }
 
-/* Select2 */
+
 .booking-form .select2-container{
     width:100% !important;
 }
@@ -423,13 +419,13 @@ body{
 
 @media screen and (max-width: 768px) {
 
-    /* Hero Section Container */
+    
     .hero {
         height: 240px;
         padding: 0 20px;
     }
 
-    /* Dark Overlay for Contrast */
+    
     .overlay {
         background: rgba(0, 0, 0, 0.5);
     }
@@ -442,7 +438,7 @@ body{
         gap: 6px;
     }
 
-    /* Main Hero Title */
+    
     .hero-content h1 {
         font-size: 30px;
         font-weight: 700;
@@ -453,7 +449,7 @@ body{
         text-align: center;
     }
 
-    /* Breadcrumbs */
+    
     .breadcrumb {
         font-size: 11px;
         font-weight: 600;
@@ -468,19 +464,19 @@ body{
         opacity: 0.95;
     }
 
-    /* Section Container */
+    
     .menu-section {
         background-color: #fdf7ef; 
         padding: 50px 20px;
     }
 
-    /* Section Header */
+    
     .menu-header {
         text-align: center;
         margin-bottom: 35px;
     }
 
-    /* Top Orange Pill Badge */
+    
     .menu-btn {
         display: inline-block;
         background-color: #E36C2F;
@@ -493,7 +489,7 @@ body{
         text-transform: uppercase;
     }
 
-    /* Main Section Title */
+    
     .menu-header h2 {
         font-size: 22px;
         font-weight: 800;
@@ -504,7 +500,7 @@ body{
         text-transform: uppercase;
     }
 
-    /* Wrapper: Single Column Stack */
+    
     .menu-wrapper {
         width: 100%;
         display: flex;
@@ -512,18 +508,18 @@ body{
         gap: 35px;
     }
 
-    /* Hide Desktop Center Divider Line */
+   
     .menu-wrapper::before {
         display: none;
     }
 
-    /* Column Reset */
+    
     .menu-column {
         border-top: none;
         padding-top: 0;
     }
 
-    /* Category Title Headers (STARTER MENU / MAIN DISHES) */
+   
     .column-title {
         text-align: center;
         margin-bottom: 25px;
@@ -551,7 +547,7 @@ body{
         text-transform: uppercase;
     }
 
-    /* Food Items */
+    
     .food-item {
         display: flex;
         align-items: center;
@@ -559,7 +555,7 @@ body{
         margin-bottom: 22px;
     }
 
-    /* Round Thumbnails */
+    
     .food-item img {
         width: 52px;
         height: 52px;
@@ -586,7 +582,7 @@ body{
         white-space: nowrap;
     }
 
-    /* Dotted Leader Line */
+    
     .food-head::after {
         content: "";
         flex: 1;
@@ -594,7 +590,7 @@ body{
         margin: 0 6px;
     }
 
-    /* Orange Price */
+    
     .food-head span {
         color: #E36C2F;
         font-weight: 700;
@@ -602,17 +598,13 @@ body{
         white-space: nowrap;
     }
 
-    /* Dish Description Text */
+  
     .food-info p {
         margin-top: 4px;
         color: #777777;
         font-size: 12px;
         line-height: 1.4;
     }
-
-    /* ==========================
-   BOOK TABLE - MOBILE
-========================== */
 
 .booking-section{
     background:#1b1b1b;
@@ -656,7 +648,7 @@ body{
     gap:20px;
 }
 
-/* Select2 */
+
 .booking-form .select2-container{
     width:100% !important;
 }
@@ -686,7 +678,7 @@ body{
     border-color:#fff transparent transparent transparent !important;
 }
 
-/* Date & Time */
+
 .booking-form input{
     width:100%;
     height:44px;
@@ -699,12 +691,12 @@ body{
     outline:none;
 }
 
-/* Placeholder */
+
 .booking-form input::placeholder{
     color:#c5c5c5;
 }
 
-/* Submit Button */
+
 .booking-form button{
     width:100%;
     height:48px;
@@ -720,15 +712,12 @@ body{
 }
 
 
-   
-
-    /* CTA Section Outer Container */
     .cta-banner {
         padding: 50px 20px;
         background-position: center;
     }
 
-    /* Stack Content Vertically */
+    
     .cta-container {
         flex-direction: column;
         align-items: flex-start;
@@ -741,7 +730,7 @@ body{
         width: 100%;
     }
 
-    /* Subtitle Tag Line */
+    
     .cta-subtitle {
         font-size: 13px;
         font-weight: 700;
@@ -751,7 +740,7 @@ body{
         text-transform: uppercase;
     }
 
-    /* Main CTA Title */
+    
     .cta-content h2 {
         font-size: 26px;
         font-weight: 800;
@@ -761,7 +750,7 @@ body{
         text-transform: uppercase;
     }
 
-    /* Rounded Outline Button */
+    
     .cta-btn {
         width: 100%;
         max-width: 220px;

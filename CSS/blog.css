@@ -70,7 +70,7 @@ body{
     color:#fff;
 }
 
-/* Animation */
+
 
 @keyframes fadeUp{
 
@@ -384,11 +384,6 @@ color: #111111;
 }
 
 
-
-/* ===========================
-   Blog Pagination
-=========================== */
-
 .blog-pagination{
     display:flex;
     align-items:center;
@@ -432,9 +427,7 @@ color: #111111;
 }
 
 
-/*=========================
-        CTA BANNER
-==========================*/
+
 
 .cta-banner{
     position:relative;
@@ -510,24 +503,20 @@ color: #111111;
 }
 
 
-/* ==========================================
-   MOBILE RESPONSIVE STYLES (BLOG HERO BANNER)
-   ========================================== */
-
 @media screen and (max-width: 768px) {
 
-    /* Hero Banner Container */
+    
     .blog-banner {
         height: 240px;
         padding: 0 20px;
     }
 
-    /* Dark Overlay for Text Readability */
+    
     .overlay {
         background: rgba(0, 0, 0, 0.52);
     }
 
-    /* Centered Text Wrapper */
+   
     .banner-content {
         display: flex;
         flex-direction: column;
@@ -536,7 +525,7 @@ color: #111111;
         gap: 6px;
     }
 
-    /* Main Page Title */
+    
     .banner-content h1 {
         font-size: 32px;
         font-weight: 800;
@@ -547,7 +536,7 @@ color: #111111;
         text-align: center;
     }
 
-    /* Breadcrumbs Links */
+   
     .breadcrumb {
         font-size: 11px;
         font-weight: 700;
@@ -562,13 +551,12 @@ color: #111111;
         opacity: 0.95;
     }
 
-    /* Section Container */
+    
     .blog-section {
         padding: 40px 15px;
         background-color: #ffffff;
     }
 
-    /* Stack layout in a single column */
     .blog-container {
         display: flex;
         flex-direction: column;
@@ -582,7 +570,7 @@ color: #111111;
         width: 100%;
     }
 
-    /* Individual Blog Post Cards */
+   
     .blog-card {
         background: #f9f9f9;
         border-radius: 12px;
@@ -591,7 +579,7 @@ color: #111111;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
     }
 
-    /* Image Container & Category Badge */
+    
     .blog-image {
         position: relative;
         width: 100%;
@@ -606,7 +594,7 @@ color: #111111;
         display: block;
     }
 
-    /* Orange Category Badge Pill */
+   
     .category {
         position: absolute;
         top: 12px;
@@ -621,12 +609,12 @@ color: #111111;
         text-transform: uppercase;
     }
 
-    /* Content Box Inner Padding */
+   
     .blog-content {
         padding: 20px 18px 22px;
     }
 
-    /* Metadata Bar (Date & Author) */
+    
     .meta {
         display: flex;
         align-items: center;
@@ -648,7 +636,7 @@ color: #111111;
         opacity: 0.7;
     }
 
-    /* Post Title */
+    
     .blog-content h2 {
         font-size: 17px;
         font-weight: 800;
@@ -659,7 +647,7 @@ color: #111111;
         letter-spacing: 0.3px;
     }
 
-    /* Excerpt Text */
+   
     .blog-content p {
         font-size: 13px;
         color: #666666;
@@ -667,7 +655,7 @@ color: #111111;
         margin-bottom: 16px;
     }
 
-    /* Read More Link */
+    
     .read-more {
         display: inline-flex;
         align-items: center;
@@ -685,7 +673,7 @@ color: #111111;
         height: 14px;
     }
 
-    /* Pagination Bar */
+  
     .blog-pagination {
         display: flex;
         align-items: center;
@@ -710,7 +698,7 @@ color: #111111;
         transition: background 0.3s ease, color 0.3s ease;
     }
 
-    /* Sidebar Wrapper */
+    
     aside.sidebar {
         width: 100%;
         max-width: 420px;
@@ -720,7 +708,7 @@ color: #111111;
         gap: 20px;
     }
 
-    /* Individual Widget Card */
+    
     .widget {
         background: #f9f9f9;
         border-radius: 12px;
@@ -729,7 +717,7 @@ color: #111111;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     }
 
-    /* Widget Titles */
+    
     .widget h3 {
         font-size: 16px;
         font-weight: 800;
@@ -739,9 +727,7 @@ color: #111111;
         text-transform: uppercase;
     }
 
-    /* ----------------------------------
-       1. Search Widget
-    ---------------------------------- */
+   
     .search-box {
         display: flex;
         align-items: center;
@@ -785,9 +771,7 @@ color: #111111;
         filter: brightness(0) invert(1);
     }
 
-    /* ----------------------------------
-       2. Recent Posts Widget
-    ---------------------------------- */
+    
     .recent-post {
         display: flex;
         align-items: center;
@@ -833,9 +817,7 @@ color: #111111;
         margin: 0;
     }
 
-    /* ----------------------------------
-       3. Categories Widget
-    ---------------------------------- */
+ 
     .category-list {
         display: flex;
         flex-direction: column;
@@ -869,9 +851,7 @@ color: #111111;
         height: 12px;
     }
 
-    /* ----------------------------------
-       4. Gallery Widget
-    ---------------------------------- */
+  
     .gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -885,9 +865,7 @@ color: #111111;
         object-fit: cover;
     }
 
-    /* ----------------------------------
-       5. Popular Tags Widget
-    ---------------------------------- */
+   
     .tags-box {
         display: flex;
         flex-wrap: wrap;
@@ -918,13 +896,13 @@ color: #111111;
         border-color: #e36c2f;
     }
 
-    /* CTA Section Outer Container */
+    
     .cta-banner {
         padding: 50px 20px;
         background-position: center;
     }
 
-    /* Stack Content Vertically */
+    
     .cta-container {
         flex-direction: column;
         align-items: flex-start;
@@ -937,7 +915,7 @@ color: #111111;
         width: 100%;
     }
 
-    /* Subtitle Tag Line */
+    
     .cta-subtitle {
         font-size: 13px;
         font-weight: 700;
@@ -947,7 +925,7 @@ color: #111111;
         text-transform: uppercase;
     }
 
-    /* Main CTA Title */
+    
     .cta-content h2 {
         font-size: 26px;
         font-weight: 800;
@@ -957,7 +935,7 @@ color: #111111;
         text-transform: uppercase;
     }
 
-    /* Rounded Outline Button */
+    
     .cta-btn {
         width: 100%;
         max-width: 220px;
