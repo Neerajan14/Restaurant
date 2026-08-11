@@ -15,6 +15,7 @@ fetch("nav.html")
         }
     });
 
+
 // Load Footer
 fetch("footer.html")
     .then(response => response.text())
@@ -22,41 +23,62 @@ fetch("footer.html")
         document.getElementById("footer").innerHTML = data;
     });
 
-// Slider Dots Animation
+
+// ========================================
+// HERO SLIDER
+// ========================================
+
+const hero = document.querySelector(".hero");
 const dots = document.querySelectorAll(".dots span");
 
-if (dots.length) {
+if (hero && dots.length) {
+
+    const images = [
+        "Images/hero-1.png",
+        "Images/hero-2.jpg",
+        "Images/hero-3.jpg"
+    ];
+
     let current = 0;
 
+    // Set first image
+    hero.style.backgroundImage = `url("${images[current]}")`;
+
     setInterval(() => {
+
+        // Remove active from current dot
         dots[current].classList.remove("active");
-        current = (current + 1) % dots.length;
+
+        // Move to next image
+        current = (current + 1) % images.length;
+
+        // Add active to new dot
         dots[current].classList.add("active");
+
+        
+        hero.style.backgroundImage = `url("${images[current]}")`;
+
     }, 3000);
 }
 
-$(function () {
-    $("#reservation-date").datepicker({
-        dateFormat: "dd-mm-yy",
-        minDate: 0,
-        changeMonth: true,
-        changeYear: true
-    });
-});
-
 
 const wrapper = document.querySelector(".testimonial-wrapper");
+const nextButton = document.querySelector(".next");
+const prevButton = document.querySelector(".prev");
 
-document.querySelector(".next").onclick = () => {
-    wrapper.scrollBy({
-        left: 380,
-        behavior: "smooth"
-    });
-};
+if (wrapper && nextButton && prevButton) {
 
-document.querySelector(".prev").onclick = () => {
-    wrapper.scrollBy({
-        left: -380,
-        behavior: "smooth"
-    });
-};
+    nextButton.onclick = () => {
+        wrapper.scrollBy({
+            left: 380,
+            behavior: "smooth"
+        });
+    };
+
+    prevButton.onclick = () => {
+        wrapper.scrollBy({
+            left: -380,
+            behavior: "smooth"
+        });
+    };
+}
