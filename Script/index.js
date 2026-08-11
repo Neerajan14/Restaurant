@@ -41,18 +41,18 @@ if (hero && dots.length) {
 
     let current = 0;
 
-    // Set first image
+    
     hero.style.backgroundImage = `url("${images[current]}")`;
 
     setInterval(() => {
 
-        // Remove active from current dot
+        
         dots[current].classList.remove("active");
 
-        // Move to next image
+       
         current = (current + 1) % images.length;
 
-        // Add active to new dot
+        
         dots[current].classList.add("active");
 
         
