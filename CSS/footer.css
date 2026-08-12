@@ -176,7 +176,7 @@ body{
         gap:35px 20px;
     }
 
-    /* logo/address col and newsletter col each span full width */
+    
     .footer-col:nth-child(1),
     .footer-col:nth-child(4){
         grid-column:1 / -1;
@@ -217,10 +217,6 @@ body{
         font-size:14px;
         background:#2a2a2a;
         color:#fff;
-    }
-
-    .social-icons a:first-child{
-        background:#f47c35;
     }
 
     .social-icons a:hover{
