@@ -23,11 +23,6 @@ fetch("footer.html")
         document.getElementById("footer").innerHTML = data;
     });
 
-
-// ========================================
-// HERO SLIDER
-// ========================================
-
 const hero = document.querySelector(".hero");
 const dots = document.querySelectorAll(".dots span");
 
@@ -82,3 +77,14 @@ if (wrapper && nextButton && prevButton) {
         });
     };
 }
+
+$(document).ready(function () {
+
+    $("#reservation-date").datepicker({
+        dateFormat: "dd/mm/yy",
+        minDate: 0,
+        changeMonth: true,
+        changeYear: true
+    });
+
+});
