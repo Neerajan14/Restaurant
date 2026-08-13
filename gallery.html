@@ -5,306 +5,683 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gallery</title>
+    <title>Gallery | Restaurant</title>
 
-    <!-- Jost Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-    <!-- Gallery CSS -->
     <link rel="stylesheet" href="CSS/gallery.css">
     <link rel="stylesheet" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/footer.css">
 </head>
 
+
 <body>
 
-  
     <div id="navbar"></div>
 
-
-    
     <main class="gallery-page">
 
-        
         <section class="gallery-heading">
 
             <div class="heading-left">
-                <span class="eyebrow">OUR GALLERY</span>
+
+                <span class="eyebrow">
+                    OUR GALLERY
+                </span>
 
                 <h1>
                     Moments from
                     <span>Restaurant</span>
                 </h1>
+
             </div>
+
 
             <div class="heading-right">
+
                 <p>
                     Explore the atmosphere, flavors and memorable
-                    moments of Sagarmatha Restaurant.
+                    moments of Restaurant.
                 </p>
+
             </div>
 
         </section>
 
+        <section class="gallery-upload-section">
 
-        
-        <section class="gallery-grid" id="galleryGrid">
+            <div class="upload-content">
 
-            <!-- Image 1 -->
-            <article class="gallery-item item-large"
-                data-category="Restaurant"
-                data-title="The Sagarmatha Experience">
+                <div class="upload-text">
 
-                <img src="Images/about1.jpg"
-                    alt="Sagarmatha Restaurant interior"
-                    loading="eager">
+                    <span class="upload-label">
+                        MANAGE GALLERY
+                    </span>
 
-                <div class="image-overlay">
-                    <div class="image-info">
-                        <span>01 / RESTAURANT</span>
-                        <h2>The Sagarmatha Experience</h2>
-                    </div>
+                    <h2>
+                        Add your restaurant moments
+                    </h2>
 
-                    <button class="view-image" aria-label="View image">
-                        ↗
-                    </button>
-                </div>
-
-            </article>
-
-
-            <!-- Image 2 -->
-            <article class="gallery-item item-tall"
-                data-category="Food"
-                data-title="Authentic Himalayan Flavors">
-
-                <img src="Images\cheesecake.jpg"
-                    alt="Authentic Himalayan food"
-                    loading="lazy">
-
-                <div class="image-overlay">
-
-                    <div class="image-info">
-                        <span>02 / FOOD</span>
-                        <h2>Authentic Himalayan Flavors</h2>
-                    </div>
-
-                    <button class="view-image" aria-label="View image">
-                        ↗
-                    </button>
+                    <p>
+                        Select one or multiple images from your
+                        computer or mobile device.
+                    </p>
 
                 </div>
 
-            </article>
+
+                <div class="upload-action">
+
+                    <label
+                        for="imageUpload"
+                        class="upload-btn"
+                    >
+
+                        <span class="upload-icon">
+                            +
+                        </span>
+
+                        Add Images
+
+                    </label>
 
 
-            <!-- Image 3 -->
-            <article class="gallery-item item-small"
-                data-category="Dining"
-                data-title="An Evening at Sagarmatha">
-
-                <img src="Images\chocolava.jpg"
-                    alt="Restaurant dining area"
-                    loading="lazy">
-
-                <div class="image-overlay">
-
-                    <div class="image-info">
-                        <span>03 / DINING</span>
-                        <h2>An Evening at Sagarmatha</h2>
-                    </div>
-
-                    <button class="view-image" aria-label="View image">
-                        ↗
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- Image 4 -->
-            <article class="gallery-item item-small"
-                data-category="Food"
-                data-title="Made With Passion">
-
-                <img src="Images\food1.png"
-                    alt="Restaurant dish"
-                    loading="lazy">
-
-                <div class="image-overlay">
-
-                    <div class="image-info">
-                        <span>04 / FOOD</span>
-                        <h2>Made With Passion</h2>
-                    </div>
-
-                    <button class="view-image" aria-label="View image">
-                        ↗
-                    </button>
+                    <input
+                        type="file"
+                        id="imageUpload"
+                        accept="image/*"
+                        multiple
+                        hidden
+                    >
 
                 </div>
 
-            </article>
-
-
-            <!-- Image 5 -->
-            <article class="gallery-item item-wide"
-                data-category="Atmosphere"
-                data-title="Where Food Meets Culture">
-
-                <img src="Images\food3.png"
-                    alt="Restaurant atmosphere"
-                    loading="lazy">
-
-                <div class="image-overlay">
-
-                    <div class="image-info">
-                        <span>05 / ATMOSPHERE</span>
-                        <h2>Where Food Meets Culture</h2>
-                    </div>
-
-                    <button class="view-image" aria-label="View image">
-                        ↗
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- Image 6 -->
-            <article class="gallery-item item-medium"
-                data-category="Dining"
-                data-title="A Place to Gather">
-
-                <img src="Images\dalbhat.png"
-                    alt="Restaurant guests dining"
-                    loading="lazy">
-
-                <div class="image-overlay">
-
-                    <div class="image-info">
-                        <span>06 / DINING</span>
-                        <h2>A Place to Gather</h2>
-                    </div>
-
-                    <button class="view-image" aria-label="View image">
-                        ↗
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- Image 7 -->
-            <article class="gallery-item item-medium"
-                data-category="Food"
-                data-title="Fresh From Our Kitchen">
-
-                <img src="Images\foodX.jpg"
-                    alt="Fresh restaurant food"
-                    loading="lazy">
-
-                <div class="image-overlay">
-
-                    <div class="image-info">
-                        <span>07 / FOOD</span>
-                        <h2>Fresh From Our Kitchen</h2>
-                    </div>
-
-                    <button class="view-image" aria-label="View image">
-                        ↗
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- Image 8 -->
-            <article class="gallery-item item-large"
-                data-category="Restaurant"
-                data-title="The Heart of Sagarmatha">
-
-                <img src="Images\food7.jpg"
-                    alt="Sagarmatha Restaurant"
-                    loading="lazy">
-
-                <div class="image-overlay">
-
-                    <div class="image-info">
-                        <span>08 / RESTAURANT</span>
-                        <h2>The Heart of Sagarmatha</h2>
-                    </div>
-
-                    <button class="view-image" aria-label="View image">
-                        ↗
-                    </button>
-
-                </div>
-
-            </article>
+            </div>
 
         </section>
+
+        <section
+            class="gallery-grid"
+            id="galleryGrid"
+        >
+
+            <article
+                class="gallery-item item-large"
+                data-category="Restaurant"
+                data-title="The Sagarmatha Experience"
+                data-default="true"
+            >
+
+                <img
+                    src="Images/about1.jpg"
+                    alt="Sagarmatha Restaurant interior"
+                    loading="eager"
+                >
+
+
+                <div class="image-overlay">
+
+                    <div class="image-info">
+
+                        <span>
+                            01 / RESTAURANT
+                        </span>
+
+                        <h2>
+                            The Sagarmatha Experience
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="view-image"
+                        type="button"
+                        aria-label="View image"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article
+                class="gallery-item item-tall"
+                data-category="Food"
+                data-title="Authentic Himalayan Flavors"
+                data-default="true"
+            >
+
+                <img
+                    src="Images/cheesecake.jpg"
+                    alt="Authentic Himalayan food"
+                    loading="lazy"
+                >
+
+
+                <div class="image-overlay">
+
+                    <div class="image-info">
+
+                        <span>
+                            02 / FOOD
+                        </span>
+
+                        <h2>
+                            Authentic Himalayan Flavors
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="view-image"
+                        type="button"
+                        aria-label="View image"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article
+                class="gallery-item item-small"
+                data-category="Dining"
+                data-title="An Evening at Sagarmatha"
+                data-default="true"
+            >
+
+                <img
+                    src="Images/chocolava.jpg"
+                    alt="Restaurant dining area"
+                    loading="lazy"
+                >
+
+
+                <div class="image-overlay">
+
+                    <div class="image-info">
+
+                        <span>
+                            03 / DINING
+                        </span>
+
+                        <h2>
+                            An Evening at Sagarmatha
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="view-image"
+                        type="button"
+                        aria-label="View image"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article
+                class="gallery-item item-small"
+                data-category="Food"
+                data-title="Made With Passion"
+                data-default="true"
+            >
+
+                <img
+                    src="Images/food1.png"
+                    alt="Restaurant dish"
+                    loading="lazy"
+                >
+
+
+                <div class="image-overlay">
+
+                    <div class="image-info">
+
+                        <span>
+                            04 / FOOD
+                        </span>
+
+                        <h2>
+                            Made With Passion
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="view-image"
+                        type="button"
+                        aria-label="View image"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article
+                class="gallery-item item-wide"
+                data-category="Atmosphere"
+                data-title="Where Food Meets Culture"
+                data-default="true"
+            >
+
+                <img
+                    src="Images/food3.png"
+                    alt="Restaurant atmosphere"
+                    loading="lazy"
+                >
+
+
+                <div class="image-overlay">
+
+                    <div class="image-info">
+
+                        <span>
+                            05 / ATMOSPHERE
+                        </span>
+
+                        <h2>
+                            Where Food Meets Culture
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="view-image"
+                        type="button"
+                        aria-label="View image"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article
+                class="gallery-item item-medium"
+                data-category="Dining"
+                data-title="A Place to Gather"
+                data-default="true"
+            >
+
+                <img
+                    src="Images/dalbhat.png"
+                    alt="Restaurant guests dining"
+                    loading="lazy"
+                >
+
+
+                <div class="image-overlay">
+
+                    <div class="image-info">
+
+                        <span>
+                            06 / DINING
+                        </span>
+
+                        <h2>
+                            A Place to Gather
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="view-image"
+                        type="button"
+                        aria-label="View image"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article
+                class="gallery-item item-medium"
+                data-category="Food"
+                data-title="Fresh From Our Kitchen"
+                data-default="true"
+            >
+
+                <img
+                    src="Images/foodX.jpg"
+                    alt="Fresh restaurant food"
+                    loading="lazy"
+                >
+
+
+                <div class="image-overlay">
+
+                    <div class="image-info">
+
+                        <span>
+                            07 / FOOD
+                        </span>
+
+                        <h2>
+                            Fresh From Our Kitchen
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="view-image"
+                        type="button"
+                        aria-label="View image"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article
+                class="gallery-item item-large"
+                data-category="Restaurant"
+                data-title="The Heart of Sagarmatha"
+                data-default="true"
+            >
+
+                <img
+                    src="Images/food7.jpg"
+                    alt="Sagarmatha Restaurant"
+                    loading="lazy"
+                >
+
+
+                <div class="image-overlay">
+
+                    <div class="image-info">
+
+                        <span>
+                            08 / RESTAURANT
+                        </span>
+
+                        <h2>
+                            The Heart of Sagarmatha
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="view-image"
+                        type="button"
+                        aria-label="View image"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
 
     </main>
 
+    <div
+        class="upload-modal"
+        id="uploadModal"
+        aria-hidden="true"
+    >
 
-    <!-- ================= LIGHTBOX ================= -->
-    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div
+            class="upload-modal-backdrop"
+            id="uploadModalBackdrop"
+        ></div>
 
-        <div class="lightbox-backdrop"></div>
 
-        <div class="lightbox-content">
+        <div
+            class="upload-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="uploadModalTitle"
+        >
 
-            <!-- Top Bar -->
+            <div class="upload-modal-header">
+
+                <div>
+
+                    <span class="modal-eyebrow">
+                        ADD TO GALLERY
+                    </span>
+
+                    <h2 id="uploadModalTitle">
+                        Image Details
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="upload-modal-close"
+                    id="uploadModalClose"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div class="upload-preview">
+
+                <img
+                    id="uploadPreviewImage"
+                    src=""
+                    alt="Selected image preview"
+                >
+
+            </div>
+
+            <form
+                id="uploadDetailsForm"
+                class="upload-details-form"
+            >
+
+                <div class="form-group">
+
+                    <label for="imageCategory">
+                        Category
+                    </label>
+
+                    <select
+                        id="imageCategory"
+                        required
+                    >
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option value="Restaurant">
+                            Restaurant
+                        </option>
+
+                        <option value="Food">
+                            Food
+                        </option>
+
+                        <option value="Dining">
+                            Dining
+                        </option>
+
+                        <option value="Atmosphere">
+                            Atmosphere
+                        </option>
+
+                        <option value="Events">
+                            Events
+                        </option>
+
+                        <option value="Moments">
+                            Moments
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="imageTitle">
+                        Image Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="imageTitle"
+                        placeholder="The Sagarmatha Experience"
+                        required
+                        maxlength="80"
+                    >
+
+                </div>
+
+                <div class="upload-form-actions">
+
+                    <button
+                        type="button"
+                        class="modal-cancel-btn"
+                        id="uploadCancel"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="modal-add-btn"
+                    >
+                        Add Image
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+            <div
+                class="upload-progress"
+                id="uploadProgress"
+            >
+                Image 1 of 1
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div
+        class="lightbox"
+        id="lightbox"
+        aria-hidden="true"
+    >
+
+        <div
+            class="lightbox-backdrop"
+            id="lightboxBackdrop"
+        ></div>
+
+
+        <div
+            class="lightbox-content"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Image viewer"
+        >
+
+
+            <!-- TOP -->
+
             <div class="lightbox-top">
 
-                <span class="lightbox-category" id="lightboxCategory">
+                <span
+                    class="lightbox-category"
+                    id="lightboxCategory"
+                >
                     RESTAURANT
                 </span>
 
-                <button class="lightbox-close"
+
+                <button
+                    class="lightbox-close"
                     id="lightboxClose"
-                    aria-label="Close gallery">
+                    type="button"
+                    aria-label="Close gallery"
+                >
                     ×
                 </button>
 
             </div>
 
 
-            <!-- Main Image -->
             <div class="lightbox-image-wrapper">
 
-                <button class="lightbox-arrow lightbox-prev"
+                <button
+                    class="lightbox-arrow lightbox-prev"
                     id="lightboxPrev"
-                    aria-label="Previous image">
+                    type="button"
+                    aria-label="Previous image"
+                >
                     ←
                 </button>
 
-                <img id="lightboxImage"
-                    src=""
-                    alt="">
 
-                <button class="lightbox-arrow lightbox-next"
+                <img
+                    id="lightboxImage"
+                    src=""
+                    alt=""
+                >
+
+
+                <button
+                    class="lightbox-arrow lightbox-next"
                     id="lightboxNext"
-                    aria-label="Next image">
+                    type="button"
+                    aria-label="Next image"
+                >
                     →
                 </button>
 
             </div>
 
-
-            <!-- Bottom Info -->
             <div class="lightbox-bottom">
 
                 <div>
+
                     <span id="lightboxCounter">
                         01 / 08
                     </span>
@@ -312,20 +689,30 @@
                     <h2 id="lightboxTitle">
                         The Sagarmatha Experience
                     </h2>
+
                 </div>
 
+
+                <button
+                    class="lightbox-delete"
+                    id="lightboxDelete"
+                    type="button"
+                    hidden
+                >
+                    Delete Image
+                </button>
+
             </div>
+
 
         </div>
 
     </div>
 
 
-    <!-- ================= FOOTER ================= -->
     <div id="footer"></div>
 
 
-    <!-- Gallery JS -->
     <script src="Script/gallery.js"></script>
 
 </body>

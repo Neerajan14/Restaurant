@@ -1,27 +1,16 @@
-/* =========================================================
-   LOAD NAVBAR
-   ========================================================= */
+"use strict";
 
 fetch("nav.html")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Navbar could not be loaded.");
-        }
-
-        return response.text();
-    })
+    .then(response => response.text())
     .then(data => {
 
-        const navbar = document.getElementById("navbar");
+        const navbar =
+            document.getElementById("navbar");
 
         if (navbar) {
             navbar.innerHTML = data;
         }
 
-        /*
-         * Initialize mobile navbar AFTER
-         * nav.html has been loaded.
-         */
 
         const hamburger =
             document.querySelector(".hamburger");
@@ -32,35 +21,32 @@ fetch("nav.html")
 
         if (hamburger && navLinks) {
 
-            hamburger.addEventListener("click", () => {
+            hamburger.addEventListener(
+                "click",
+                () => {
 
-                navLinks.classList.toggle("active");
+                    navLinks.classList.toggle(
+                        "active"
+                    );
 
-                hamburger.classList.toggle("active");
-
-            });
+                }
+            );
 
         }
 
     })
     .catch(error => {
-        console.error(error);
+
+        console.error(
+            "Navbar loading error:",
+            error
+        );
+
     });
 
 
-/* =========================================================
-   LOAD FOOTER
-   ========================================================= */
-
 fetch("footer.html")
-    .then(response => {
-
-        if (!response.ok) {
-            throw new Error("Footer could not be loaded.");
-        }
-
-        return response.text();
-    })
+    .then(response => response.text())
     .then(data => {
 
         const footer =
@@ -72,369 +58,1188 @@ fetch("footer.html")
 
     })
     .catch(error => {
-        console.error(error);
+
+        console.error(
+            "Footer loading error:",
+            error
+        );
+
     });
 
-
-/* =========================================================
-   GALLERY
-   ========================================================= */
-
-document.addEventListener("DOMContentLoaded", () => {
+const galleryGrid =
+    document.getElementById("galleryGrid");
 
 
-    const galleryItems =
-        document.querySelectorAll(".gallery-item");
+const imageUpload =
+    document.getElementById("imageUpload");
 
 
-    const lightbox =
-        document.getElementById("lightbox");
+/* Upload modal */
+
+const uploadModal =
+    document.getElementById("uploadModal");
+
+const uploadModalBackdrop =
+    document.getElementById("uploadModalBackdrop");
+
+const uploadModalClose =
+    document.getElementById("uploadModalClose");
+
+const uploadCancel =
+    document.getElementById("uploadCancel");
+
+const uploadDetailsForm =
+    document.getElementById(
+        "uploadDetailsForm"
+    );
+
+const uploadPreviewImage =
+    document.getElementById(
+        "uploadPreviewImage"
+    );
+
+const imageCategory =
+    document.getElementById(
+        "imageCategory"
+    );
+
+const imageTitle =
+    document.getElementById(
+        "imageTitle"
+    );
+
+const uploadProgress =
+    document.getElementById(
+        "uploadProgress"
+    );
+
+const lightbox =
+    document.getElementById("lightbox");
+
+const lightboxBackdrop =
+    document.getElementById(
+        "lightboxBackdrop"
+    );
+
+const lightboxClose =
+    document.getElementById(
+        "lightboxClose"
+    );
+
+const lightboxImage =
+    document.getElementById(
+        "lightboxImage"
+    );
+
+const lightboxCategory =
+    document.getElementById(
+        "lightboxCategory"
+    );
+
+const lightboxTitle =
+    document.getElementById(
+        "lightboxTitle"
+    );
+
+const lightboxCounter =
+    document.getElementById(
+        "lightboxCounter"
+    );
+
+const lightboxPrev =
+    document.getElementById(
+        "lightboxPrev"
+    );
+
+const lightboxNext =
+    document.getElementById(
+        "lightboxNext"
+    );
+
+const lightboxDelete =
+    document.getElementById(
+        "lightboxDelete"
+    );
 
 
-    const lightboxImage =
-        document.getElementById("lightboxImage");
+const STORAGE_KEY =
+    "sagarmatha_gallery_images";
 
 
-    const lightboxTitle =
-        document.getElementById("lightboxTitle");
+let galleryItems = [];
+
+let currentIndex = 0;
 
 
-    const lightboxCategory =
-        document.getElementById("lightboxCategory");
+let pendingFiles = [];
+
+let currentPendingIndex = 0;
 
 
-    const lightboxCounter =
-        document.getElementById("lightboxCounter");
+function getSavedImages() {
+
+    try {
+
+        const saved =
+            localStorage.getItem(
+                STORAGE_KEY
+            );
 
 
-    const closeButton =
-        document.getElementById("lightboxClose");
+        if (!saved) {
+            return [];
+        }
 
 
-    const previousButton =
-        document.getElementById("lightboxPrev");
+        return JSON.parse(saved);
 
+    }
+    catch (error) {
 
-    const nextButton =
-        document.getElementById("lightboxNext");
+        console.error(
+            "Storage read error:",
+            error
+        );
 
-
-    const backdrop =
-        document.querySelector(".lightbox-backdrop");
-
-
-    let currentIndex = 0;
-
-
-    /* =====================================================
-       OPEN LIGHTBOX
-       ===================================================== */
-
-    function openLightbox(index) {
-
-        currentIndex = index;
-
-        updateLightbox();
-
-        lightbox.classList.add("active");
-
-        lightbox.setAttribute("aria-hidden", "false");
-
-        document.body.classList.add("lightbox-open");
+        return [];
 
     }
 
+}
 
-    /* =====================================================
-       CLOSE LIGHTBOX
-       ===================================================== */
+function saveImages(images) {
 
-    function closeLightbox() {
+    try {
 
-        lightbox.classList.remove("active");
+        localStorage.setItem(
+            STORAGE_KEY,
+            JSON.stringify(images)
+        );
 
-        lightbox.setAttribute("aria-hidden", "true");
+        return true;
 
-        document.body.classList.remove("lightbox-open");
+    }
+    catch (error) {
+
+        console.error(
+            "Storage save error:",
+            error
+        );
+
+
+        alert(
+            "Browser storage is full. Please delete some uploaded images and try again."
+        );
+
+
+        return false;
 
     }
 
-
-    /* =====================================================
-       UPDATE LIGHTBOX
-       ===================================================== */
-
-    function updateLightbox() {
-
-        const item =
-            galleryItems[currentIndex];
+}
 
 
-        const image =
-            item.querySelector("img");
+function initializeGallery() {
+
+    loadUploadedImages();
+
+    refreshGalleryItems();
+
+}
+
+function loadUploadedImages() {
+
+    const savedImages =
+        getSavedImages();
 
 
-        const title =
-            item.dataset.title ||
-            "Sagarmatha Restaurant";
+    savedImages.forEach(image => {
+
+        createUploadedGalleryItem(
+            image
+        );
+
+    });
+
+}
+
+
+
+function createUploadedGalleryItem(image) {
+
+    const article = document.createElement("article");
+
+    const sizes = [
+        "item-large",
+        "item-tall",
+        "item-small",
+        "item-wide",
+        "item-medium"
+    ];
+
+    const randomSize =
+        sizes[Math.floor(Math.random() * sizes.length)];
+
+
+    article.className =
+        `gallery-item ${randomSize} uploaded-item`;
+
+
+    article.dataset.category =
+        image.category;
+
+    article.dataset.title =
+        image.title;
+
+    article.dataset.id =
+        image.id;
+
+    article.dataset.uploaded =
+        "true";
+
+
+    article.innerHTML = `
+
+        <img
+            src="${image.src}"
+            alt="${escapeHTML(image.title)}"
+            loading="lazy"
+        >
+
+        <span class="uploaded-badge">
+            UPLOADED
+        </span>
+
+        <button
+            class="delete-upload"
+            type="button"
+            aria-label="Delete image"
+            data-delete-id="${image.id}"
+        >
+            ×
+        </button>
+
+        <div class="image-overlay">
+
+            <div class="image-info">
+
+                <span>
+                    00 / ${escapeHTML(
+                        image.category.toUpperCase()
+                    )}
+                </span>
+
+                <h2>
+                    ${escapeHTML(image.title)}
+                </h2>
+
+            </div>
+
+            <button
+                class="view-image"
+                type="button"
+                aria-label="View image"
+            >
+                ↗
+            </button>
+
+        </div>
+    `;
+
+
+    galleryGrid.appendChild(article);
+}
+
+
+function getGalleryNumber() {
+
+    const existingCount =
+        galleryGrid.querySelectorAll(
+            ".gallery-item"
+        ).length;
+
+
+    return String(
+        existingCount + 1
+    ).padStart(2, "0");
+
+}
+
+function escapeHTML(value) {
+
+    const div =
+        document.createElement("div");
+
+
+    div.textContent =
+        value;
+
+
+    return div.innerHTML;
+
+}
+
+imageUpload.addEventListener(
+    "change",
+    function () {
+
+        const files =
+            Array.from(this.files);
+
+
+        if (!files.length) {
+            return;
+        }
+
+        pendingFiles =
+            files.filter(file =>
+                file.type.startsWith(
+                    "image/"
+                )
+            );
+
+
+        if (!pendingFiles.length) {
+
+            alert(
+                "Please select valid image files."
+            );
+
+            this.value = "";
+
+            return;
+        }
+
+
+        currentPendingIndex = 0;
+
+
+      
+        showUploadModal();
+
+
+        showPendingImage();
+
+
+        this.value = "";
+
+    }
+);
+
+
+function showUploadModal() {
+
+    uploadModal.classList.add(
+        "active"
+    );
+
+
+    uploadModal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+
+    document.body.classList.add(
+        "modal-open"
+    );
+
+
+    setTimeout(() => {
+
+        imageCategory.focus();
+
+    }, 100);
+
+}
+
+
+function hideUploadModal() {
+
+    uploadModal.classList.remove(
+        "active"
+    );
+
+
+    uploadModal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    document.body.classList.remove(
+        "modal-open"
+    );
+
+
+    uploadPreviewImage.src =
+        "";
+
+
+    imageCategory.value =
+        "";
+
+
+    imageTitle.value =
+        "";
+
+
+    pendingFiles = [];
+
+    currentPendingIndex = 0;
+
+}
+
+
+function showPendingImage() {
+
+    if (!pendingFiles.length) {
+        return;
+    }
+
+
+    const file =
+        pendingFiles[
+            currentPendingIndex
+        ];
+
+
+  
+
+    const objectURL =
+        URL.createObjectURL(file);
+
+
+    uploadPreviewImage.src =
+        objectURL;
+
+
+ 
+
+    imageTitle.value =
+        file.name.replace(
+            /\.[^/.]+$/,
+            ""
+        );
+
+
+  
+
+    imageCategory.value =
+        "";
+
+
+  
+    uploadProgress.textContent =
+        `Image ${
+            currentPendingIndex + 1
+        } of ${
+            pendingFiles.length
+        }`;
+
+}
+
+
+
+uploadDetailsForm.addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
 
 
         const category =
-            item.dataset.category ||
-            "RESTAURANT";
+            imageCategory.value.trim();
 
 
-        /*
-         * Fade image
-         */
-
-        lightboxImage.style.opacity = "0";
+        const title =
+            imageTitle.value.trim();
 
 
-        setTimeout(() => {
 
-            lightboxImage.src = image.src;
+        if (!category) {
 
-            lightboxImage.alt = image.alt;
+            imageCategory.focus();
 
-            lightboxTitle.textContent = title;
+            return;
 
-            lightboxCategory.textContent =
-                category.toUpperCase();
+        }
 
 
-            lightboxCounter.textContent =
-                `${String(currentIndex + 1).padStart(2, "0")} / ${String(galleryItems.length).padStart(2, "0")}`;
+        if (!title) {
+
+            imageTitle.focus();
+
+            return;
+
+        }
 
 
-            lightboxImage.onload = () => {
-                lightboxImage.style.opacity = "1";
+      
+        const file =
+            pendingFiles[
+                currentPendingIndex
+            ];
+
+
+        if (!file) {
+            return;
+        }
+
+
+        
+        const reader =
+            new FileReader();
+
+
+        reader.onload = function (event) {
+
+            const imageData = {
+
+                id:
+                    Date.now().toString() +
+                    "-" +
+                    Math.random()
+                        .toString(36)
+                        .substring(2, 9),
+
+                src:
+                    event.target.result,
+
+                category:
+                    category,
+
+                title:
+                    title,
+
+                uploadedAt:
+                    new Date().toISOString()
+
             };
 
-        }, 150);
 
-    }
+          
 
-
-    /* =====================================================
-       NEXT IMAGE
-       ===================================================== */
-
-    function nextImage() {
-
-        currentIndex++;
-
-        if (currentIndex >= galleryItems.length) {
-            currentIndex = 0;
-        }
-
-        updateLightbox();
-
-    }
+            const savedImages =
+                getSavedImages();
 
 
-    /* =====================================================
-       PREVIOUS IMAGE
-       ===================================================== */
-
-    function previousImage() {
-
-        currentIndex--;
-
-        if (currentIndex < 0) {
-            currentIndex =
-                galleryItems.length - 1;
-        }
-
-        updateLightbox();
-
-    }
+            savedImages.push(
+                imageData
+            );
 
 
-    /* =====================================================
-       CLICK GALLERY IMAGE
-       ===================================================== */
-
-    galleryItems.forEach((item, index) => {
-
-        item.addEventListener("click", () => {
-
-            openLightbox(index);
-
-        });
-
-    });
+            const saved =
+                saveImages(
+                    savedImages
+                );
 
 
-    /* =====================================================
-       CLOSE BUTTON
-       ===================================================== */
-
-    if (closeButton) {
-
-        closeButton.addEventListener(
-            "click",
-            closeLightbox
-        );
-
-    }
-
-
-    /* =====================================================
-       BACKDROP CLICK
-       ===================================================== */
-
-    if (backdrop) {
-
-        backdrop.addEventListener(
-            "click",
-            closeLightbox
-        );
-
-    }
-
-
-    /* =====================================================
-       NEXT BUTTON
-       ===================================================== */
-
-    if (nextButton) {
-
-        nextButton.addEventListener(
-            "click",
-            (event) => {
-
-                event.stopPropagation();
-
-                nextImage();
-
+            if (!saved) {
+                return;
             }
-        );
 
-    }
-
-
-    /* =====================================================
-       PREVIOUS BUTTON
-       ===================================================== */
-
-    if (previousButton) {
-
-        previousButton.addEventListener(
-            "click",
-            (event) => {
-
-                event.stopPropagation();
-
-                previousImage();
-
-            }
-        );
-
-    }
+            createUploadedGalleryItem(
+                imageData
+            );
 
 
-    /* =====================================================
-       KEYBOARD CONTROLS
-       ===================================================== */
+            refreshGalleryItems();
 
-    document.addEventListener(
-        "keydown",
-        (event) => {
+
+            currentPendingIndex++;
+
 
             if (
-                !lightbox.classList.contains("active")
+                currentPendingIndex <
+                pendingFiles.length
             ) {
+
+                showPendingImage();
+
+                imageCategory.focus();
+
+            }
+            else {
+
+                hideUploadModal();
+
+            }
+
+        };
+
+
+        reader.onerror = function () {
+
+            alert(
+                "Unable to read this image."
+            );
+
+        };
+
+
+        reader.readAsDataURL(file);
+
+    }
+);
+
+
+uploadCancel.addEventListener(
+    "click",
+    function () {
+
+        hideUploadModal();
+
+    }
+);
+
+uploadModalClose.addEventListener(
+    "click",
+    function () {
+
+        hideUploadModal();
+
+    }
+);
+
+
+uploadModalBackdrop.addEventListener(
+    "click",
+    function () {
+
+        hideUploadModal();
+
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (
+            event.key === "Escape" &&
+            uploadModal.classList.contains(
+                "active"
+            )
+        ) {
+
+            hideUploadModal();
+
+            return;
+
+        }
+
+
+        if (
+            event.key === "Escape" &&
+            lightbox.classList.contains(
+                "active"
+            )
+        ) {
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+
+function refreshGalleryItems() {
+
+    galleryItems =
+        Array.from(
+            galleryGrid.querySelectorAll(
+                ".gallery-item"
+            )
+        );
+
+    updateGalleryNumbers();
+
+}
+
+
+function updateGalleryNumbers() {
+
+    galleryItems.forEach(
+        (item, index) => {
+
+            const info =
+                item.querySelector(
+                    ".image-info span"
+                );
+
+
+            if (!info) {
                 return;
             }
 
 
-            if (event.key === "Escape") {
-
-                closeLightbox();
-
-            }
+            const category =
+                item.dataset.category ||
+                "Gallery";
 
 
-            if (event.key === "ArrowRight") {
-
-                nextImage();
-
-            }
-
-
-            if (event.key === "ArrowLeft") {
-
-                previousImage();
-
-            }
+            info.textContent =
+                `${String(
+                    index + 1
+                ).padStart(2, "0")} / ${category.toUpperCase()}`;
 
         }
     );
 
-
-    /* =====================================================
-       TOUCH SWIPE
-       ===================================================== */
-
-    let touchStartX = 0;
-    let touchEndX = 0;
+}
 
 
-    lightboxImage.addEventListener(
-        "touchstart",
-        (event) => {
+galleryGrid.addEventListener(
+    "click",
+    function (event) {
 
-            touchStartX =
-                event.changedTouches[0].screenX;
-
-        },
-        { passive: true }
-    );
+        const deleteButton =
+            event.target.closest(
+                ".delete-upload"
+            );
 
 
-    lightboxImage.addEventListener(
-        "touchend",
-        (event) => {
+        if (deleteButton) {
 
-            touchEndX =
-                event.changedTouches[0].screenX;
+            event.stopPropagation();
 
 
-            handleSwipe();
-
-        },
-        { passive: true }
-    );
+            deleteUploadedImage(
+                deleteButton.dataset.deleteId
+            );
 
 
-    function handleSwipe() {
-
-        const distance =
-            touchEndX - touchStartX;
-
-
-        /*
-         * Swipe left
-         */
-
-        if (distance < -50) {
-
-            nextImage();
+            return;
 
         }
 
 
-        /*
-         * Swipe right
-         */
+        const viewButton =
+            event.target.closest(
+                ".view-image"
+            );
 
-        if (distance > 50) {
 
-            previousImage();
+        if (viewButton) {
+
+            event.stopPropagation();
+
+
+            const item =
+                viewButton.closest(
+                    ".gallery-item"
+                );
+
+
+            openLightboxForItem(
+                item
+            );
+
+
+            return;
+
+        }
+
+
+        const item =
+            event.target.closest(
+                ".gallery-item"
+            );
+
+
+        if (item) {
+
+            openLightboxForItem(
+                item
+            );
+
+        }
+
+    }
+);
+
+
+function openLightboxForItem(item) {
+
+    refreshGalleryItems();
+
+
+    currentIndex =
+        galleryItems.indexOf(
+            item
+        );
+
+
+    if (
+        currentIndex === -1
+    ) {
+        return;
+    }
+
+
+    updateLightbox();
+
+
+    lightbox.classList.add(
+        "active"
+    );
+
+
+    lightbox.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+
+    document.body.classList.add(
+        "lightbox-open"
+    );
+
+}
+
+
+function updateLightbox() {
+
+    if (!galleryItems.length) {
+        return;
+    }
+
+
+    const item =
+        galleryItems[
+            currentIndex
+        ];
+
+
+    const image =
+        item.querySelector(
+            "img"
+        );
+
+
+    if (!image) {
+        return;
+    }
+
+
+    const category =
+        item.dataset.category ||
+        "Gallery";
+
+
+    const title =
+        item.dataset.title ||
+        image.alt ||
+        "Gallery Image";
+
+
+    lightboxImage.src =
+        image.src;
+
+
+    lightboxImage.alt =
+        title;
+
+
+    lightboxCategory.textContent =
+        category.toUpperCase();
+
+
+    lightboxTitle.textContent =
+        title;
+
+
+    lightboxCounter.textContent =
+        `${String(
+            currentIndex + 1
+        ).padStart(2, "0")} / ${String(
+            galleryItems.length
+        ).padStart(2, "0")}`;
+
+
+    lightboxDelete.hidden =
+        item.dataset.uploaded !==
+        "true";
+
+}
+
+
+function closeLightbox() {
+
+    lightbox.classList.remove(
+        "active"
+    );
+
+
+    lightbox.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    document.body.classList.remove(
+        "lightbox-open"
+    );
+
+
+    setTimeout(() => {
+
+        if (
+            !lightbox.classList.contains(
+                "active"
+            )
+        ) {
+
+            lightboxImage.src =
+                "";
+
+        }
+
+    }, 300);
+
+}
+
+
+lightboxClose.addEventListener(
+    "click",
+    closeLightbox
+);
+
+
+lightboxBackdrop.addEventListener(
+    "click",
+    closeLightbox
+);
+
+
+lightboxPrev.addEventListener(
+    "click",
+    function () {
+
+        if (!galleryItems.length) {
+            return;
+        }
+
+
+        currentIndex--;
+
+
+        if (
+            currentIndex < 0
+        ) {
+
+            currentIndex =
+                galleryItems.length - 1;
+
+        }
+
+
+        updateLightbox();
+
+    }
+);
+
+
+lightboxNext.addEventListener(
+    "click",
+    function () {
+
+        if (!galleryItems.length) {
+            return;
+        }
+
+
+        currentIndex++;
+
+
+        if (
+            currentIndex >=
+            galleryItems.length
+        ) {
+
+            currentIndex = 0;
+
+        }
+
+
+        updateLightbox();
+
+    }
+);
+
+
+function deleteUploadedImage(id) {
+
+    if (!id) {
+        return;
+    }
+
+
+    const confirmed =
+        confirm(
+            "Are you sure you want to delete this image?"
+        );
+
+
+    if (!confirmed) {
+        return;
+    }
+
+
+    let savedImages =
+        getSavedImages();
+
+
+    savedImages =
+        savedImages.filter(
+            image =>
+                image.id !== id
+        );
+
+
+    saveImages(
+        savedImages
+    );
+
+
+    const item =
+        galleryGrid.querySelector(
+            `[data-id="${id}"]`
+        );
+
+
+    if (item) {
+
+        const deletedIndex =
+            galleryItems.indexOf(
+                item
+            );
+
+
+        item.remove();
+
+
+        refreshGalleryItems();
+
+
+      
+
+        if (
+            currentIndex ===
+            deletedIndex
+        ) {
+
+            closeLightbox();
+
+        }
+        else if (
+            currentIndex >
+            deletedIndex
+        ) {
+
+            currentIndex--;
 
         }
 
     }
 
-});
+}
+
+
+lightboxDelete.addEventListener(
+    "click",
+    function () {
+
+        const item =
+            galleryItems[
+                currentIndex
+            ];
+
+
+        if (!item) {
+            return;
+        }
+
+
+        const id =
+            item.dataset.id;
+
+
+        if (!id) {
+            return;
+        }
+
+
+        deleteUploadedImage(
+            id
+        );
+
+    }
+);
+
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+
+lightboxImage.addEventListener(
+    "touchstart",
+    function (event) {
+
+        touchStartX =
+            event.changedTouches[0]
+                .screenX;
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+lightboxImage.addEventListener(
+    "touchend",
+    function (event) {
+
+        touchEndX =
+            event.changedTouches[0]
+                .screenX;
+
+
+        const difference =
+            touchEndX -
+            touchStartX;
+
+
+        if (
+            Math.abs(difference) <
+            50
+        ) {
+            return;
+        }
+
+
+        if (
+            difference < 0
+        ) {
+
+            lightboxNext.click();
+
+        }
+        else {
+
+            lightboxPrev.click();
+
+        }
+
+    },
+    {
+        passive: true
+    }
+);
+
+initializeGallery();
