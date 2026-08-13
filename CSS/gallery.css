@@ -294,9 +294,8 @@ body {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(255,255,255,.55);
-
-    background: rgba(255,255,255,.08);
+    background: transparent;
+    border: none;
 
     color: #fff;
 
@@ -304,11 +303,10 @@ body {
 
     cursor: pointer;
 
-    backdrop-filter: blur(8px);
+    backdrop-filter: none;
 
     transition:
-        background .3s ease,
-        border-color .3s ease,
+        color .3s ease,
         transform .3s ease;
 }
 
