@@ -11,24 +11,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <!-- jQuery UI CSS -->
-<link rel="stylesheet"
-href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
 
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
 
-<!-- Timepicker CSS -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <!-- Timepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 
 
-    <link rel="stylesheet" href="CSS/reservation.css">
-
-    <link rel="stylesheet" href="CSS/nav.css">
-    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS\allstyle.css">
 
 
 </head>
@@ -39,11 +33,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.
     <div id="navbar"></div>
 
     <!-- Hero -->
-    <section class="hero">
+    <section class="reservation-hero">
 
-        <div class="overlay"></div>
+        <div class="reservation-overlay"></div>
 
-        <div class="hero-content">
+        <div class="reservation-hero-content">
 
             <h1>BOOK A TABLE</h1>
 
@@ -57,200 +51,192 @@ href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.
 
     </section>
 
-    
-
     <section class="reservation-section">
 
-    <div class="reservation-container">
+        <div class="reservation-container">
 
-        <form class="reservation-form">
+            <form class="reservation-form">
 
-            <div class="form-group">
-                <label>NUMBER OF GUEST *</label>
+                <div class="form-group">
+                    <label>NUMBER OF GUEST *</label>
 
-                <div class="input-icon">
-                    <select id="guest-select">
-                        <option>Person</option>
-                        <option>1 Person</option>
-                        <option>2 Person</option>
-                        <option>3 Person</option>
-                        <option>4 Person</option>
-                    </select>
+                    <div class="input-icon">
+                        <select id="guest-select">
+                            <option>Person</option>
+                            <option>1 Person</option>
+                            <option>2 Person</option>
+                            <option>3 Person</option>
+                            <option>4 Person</option>
+                        </select>
 
-                    <img src="Icons/user1.svg" alt="user">
+                        <img src="Icons/user1.svg" alt="user">
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label>SELECT DATE *</label>
+                <div class="resrvation-form-group">
+                    <label>SELECT DATE *</label>
 
-                <div class="input-icon">
-                    <input type="text" id="datepicker" placeholder="DD-MM-YYYY" readonly>
+                    <div class="input-icon">
+                        <input type="text" id="datepicker" placeholder="DD-MM-YYYY" readonly>
 
-                   
+
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label>SELECT TIME *</label>
+                <div class="resrvation-form-group">
+                    <label>SELECT TIME *</label>
 
-                <div class="input-icon">
-                    <input type="text" id="timepicker" placeholder="11:00 AM" readonly>
+                    <div class="input-icon">
+                        <input type="text" id="timepicker" placeholder="11:00 AM" readonly>
+
+                    </div>
+                </div>
+
+                <div class="resrvation-form-group">
+                    <label>YOUR NAME *</label>
+
+                    <div class="input-icon">
+                        <input type="text" placeholder="Person Name">
+
+                        <img src="Icons/user1.svg" alt="user">
+                    </div>
+                </div>
+
+                <div class="resrvation-form-group">
+                    <label>EMAIL ADDRESS *</label>
+
+                    <div class="input-icon">
+                        <input type="email" placeholder="Email Address">
+
+                        <img src="Icons/mail.svg" alt="mail">
+                    </div>
+                </div>
+
+                <div class="resrvation-form-group">
+                    <label>PHONE NUMBER *</label>
+
+                    <div class="input-icon">
+                        <input type="text" placeholder="Phone Number">
+
+
+                    </div>
+                </div>
+
+                <div class="form-group full">
+                    <label>TYPE YOUR SPECIAL MESSAGE *</label>
+
+                    <textarea></textarea>
+                </div>
+
+                <div class="button-area">
+                    <button type="submit">
+                        BOOK A TABLE
+                        <img src="Icons/whitearrow.svg" alt="arrow">
+
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Opening Time Section -->
+    <section class="opening-time-section">
+
+        <div class="opening-container">
+
+            <!-- Left Card -->
+            <div class="opening-card">
+
+                <span class="opening-tag">MAKE RESERVATION</span>
+
+                <h2>OPENING TIME</h2>
+
+                <div class="opening-table">
+
+                    <div class="day">MONDAY TO FRIDAY</div>
+                    <div class="day">FRIDAY TO SUNDAY</div>
+
+                    <div class="time">10:00</div>
+                    <div class="time">12:00</div>
+
+                    <div class="time">20:00</div>
+                    <div class="time">22:00</div>
 
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label>YOUR NAME *</label>
+                <a href="tel:+1234567890" class="phone-btn">
 
-                <div class="input-icon">
-                    <input type="text" placeholder="Person Name">
+                    <img src="Icons/resto-phone.svg" alt="Phone">
 
-                    <img src="Icons/user1.svg" alt="user">
-                </div>
-            </div>
+                    +123 456 7890
 
-            <div class="form-group">
-                <label>EMAIL ADDRESS *</label>
-
-                <div class="input-icon">
-                    <input type="email" placeholder="Email Address">
-
-                    <img src="Icons/mail.svg" alt="mail">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>PHONE NUMBER *</label>
-
-                <div class="input-icon">
-                    <input type="text" placeholder="Phone Number">
-
-                    
-                </div>
-            </div>
-
-            <div class="form-group full">
-                <label>TYPE YOUR SPECIAL MESSAGE *</label>
-
-                <textarea></textarea>
-            </div>
-
-            <div class="button-area">
-                <button type="submit">
-
-                    BOOK A TABLE
-
-                    
-
-                    <img src="Icons/whitearrow.svg" alt="arrow">
-
-                </button>
-            </div>
-
-        </form>
-
-    </div>
-
-</section>
-
-
-<!-- Opening Time Section -->
-<section class="opening-time-section">
-
-    <div class="opening-container">
-
-        <!-- Left Card -->
-        <div class="opening-card">
-
-            <span class="opening-tag">MAKE RESERVATION</span>
-
-            <h2>OPENING TIME</h2>
-
-            <div class="opening-table">
-
-                <div class="day">MONDAY TO FRIDAY</div>
-                <div class="day">FRIDAY TO SUNDAY</div>
-
-                <div class="time">10:00</div>
-                <div class="time">12:00</div>
-
-                <div class="time">20:00</div>
-                <div class="time">22:00</div>
+                </a>
 
             </div>
 
-            <a href="tel:+1234567890" class="phone-btn">
+            <!-- Right Image -->
+            <div class="opening-image">
 
-                <img src="Icons/resto-phone.svg" alt="Phone">
+                <img src="Images/Restaurant.jpg" alt="Restaurant">
 
-                +123 456 7890
+            </div>
 
+        </div>
+
+    </section>
+
+
+
+    <section class="cta">
+
+        <div class="cta-overlay"></div>
+
+        <div class="cta-container">
+
+            <div class="cta-content">
+
+                <span class="cta-subtitle">
+                    BOOK A TABLE FOR YOU
+                </span>
+
+                <h2>
+                    NEED A TABLE ON OUR RESTAURANT
+                </h2>
+
+            </div>
+
+            <a href="#" class="cta-btn">
+                BOOK A TABLE
             </a>
 
         </div>
 
-        <!-- Right Image -->
-        <div class="opening-image">
-
-            <img src="Images/Restaurant.jpg" alt="Restaurant">
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section class="cta-banner">
-
-    <div class="cta-overlay"></div>
-
-    <div class="cta-container">
-
-        <div class="cta-content">
-
-            <span class="cta-subtitle">
-                BOOK A TABLE FOR YOU
-            </span>
-
-            <h2>
-                NEED A TABLE ON OUR RESTAURANT
-            </h2>
-
-        </div>
-
-        <a href="#" class="cta-btn">
-            BOOK A TABLE
-        </a>
-
-    </div>
-
-</section>
+    </section>
 
 
 
     <!-- Footer -->
     <div id="footer"></div>
 
-    
 
-    
-   <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-<!-- jQuery UI -->
-<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
 
-<!-- jQuery Timepicker -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <!-- jQuery Timepicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 
-<!-- Select2 -->
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-<!-- Your JS -->
-<script src="Script/reservation.js"></script>
+    <!-- Your JS -->
+    <script src="Script/reservation.js"></script>
 
 </body>
 
