@@ -126,8 +126,9 @@
     }
 
     .home-hero-content h1 {
-        font-size: 32px;
-        font-weight: 800;
+        font-size: var(--font-xl);
+        font-weight: var(--weight-bold);
+        font-family: var(--font-family);
         letter-spacing: 2px;
         line-height: 1.2;
         margin-bottom: 4px;
@@ -135,8 +136,8 @@
     }
 
     .breadcrumb {
-        font-size: 11px;
-        font-weight: 700;
+        font-size: var(--font-xs);
+        font-weight: var(--weight-bold);
         letter-spacing: 1.5px;
         gap: 6px;
     }
@@ -146,23 +147,25 @@
     }
 
     .section-title h2 {
-        font-size: 22px;
+        font-size: var(--font-lg);
     }
 
+    /* Home page  */
     .home-hero {
         height: 100vh;
         padding: 0 20px;
     }
 
     .home-subtitle {
-        font-size: 12px;
+        font-size: var(--font-xs);
         letter-spacing: 1px;
         margin-bottom: 16px;
         line-height: 1.6;
     }
 
     .hero-content h1 {
-        font-size: 32px;
+        font-size: var(--font-xl);
+        font-weight: var(--weight-bold);
         margin-bottom: 28px;
     }
 
@@ -216,7 +219,7 @@
     }
 
     .service-card p {
-        font-size: 14px;
+        font-size: var(--font-md);
         margin: 0 16px 16px;
         line-height: 1.7;
     }
@@ -229,10 +232,10 @@
         gap: 30px;
         margin: 0 16px 18px;
         padding: 10px 16px;
-        border: 1px solid #E36C2F;
+        border: 1px solid var(--color-primary);
         border-radius: 6px;
         font-size: 14px;
-        color: #E36C2F;
+        color: var(--color-primary);
     }
 
     .service-card .home-read-more img {
@@ -268,18 +271,18 @@
     }
 
     .about-tag {
-        font-size: 12px;
+        font-size: var(--font-xs);
         padding: 5px 12px;
         margin-bottom: 14px;
     }
 
     .about-content h2 {
-        font-size: 28px;
+        font-size: var(--font-xl);
         margin-bottom: 16px;
     }
 
     .about-content p {
-        font-size: 14px;
+        font-size: var(--font-sm);
         margin-bottom: 14px;
     }
 
@@ -305,24 +308,24 @@
         transform: translateY(-50%);
         width: 2px;
         height: 58px;
-        background: #E67E22;
+        background: var(--color-primary);
     }
 
     .counter-box h3 {
-        font-size: 40px;
-        font-weight: 600;
+        font-size: var(--font-2xl);
+        font-weight: var(--weight-semibold);
         line-height: 1;
         margin-bottom: 7px;
-        color: #1A1208;
+        color: var(--color-black);
     }
 
     .counter-box small {
         display: block;
-        font-size: 12px;
-        font-weight: 400;
+        font-size: var(--font-xs);
+        font-weight: var(--weight-regular);
         letter-spacing: 1px;
         line-height: 1.3;
-        color: #74787C;
+        color: var(--color-text);
         white-space: nowrap;
     }
 
@@ -337,8 +340,8 @@
         max-width: 318px;
         text-align: center;
         padding: 18px 20px;
-        font-size: 15px;
-        font-weight: 600;
+        font-size: var(--font-md);
+        font-weight: var(--weight-semibold);
         margin-top: 5px;
     }
 
@@ -363,11 +366,11 @@
     }
 
     .food-tag {
-        background: #E36C2F;
-        color: #fff;
+        background: var(--color-primary);
+        color: var(--color-white);
         padding: 6px 16px;
-        font-size: 11px;
-        font-weight: 700;
+        font-size: var(--font-xs);
+        font-weight: var(--weight-bold);
         border-radius: 4px;
         letter-spacing: 0.5px;
         margin-bottom: 12px;
@@ -375,10 +378,10 @@
     }
 
     .food-title h2 {
-        font-size: 22px;
-        font-weight: 800;
+        font-size: var(--font-lg);
+        font-weight: var(--weight-bold);
         letter-spacing: -0.3px;
-        color: #111;
+        color: var(--color-black);
         margin: 0;
     }
 
@@ -393,18 +396,18 @@
 
     .food-filter button {
         padding: 6px 12px;
-        font-size: 11px;
-        font-weight: 700;
+        font-size: var(--font-xs);
+        font-weight: var(--weight-bold);
         border: 1px solid #e2e8f0;
         border-radius: 6px;
-        background: #fff;
-        color: #4a5568;
+        background: var(--color-white);
+        color: var(--color-text);
         text-transform: uppercase;
     }
 
     .food-filter button.active {
-        border-color: #E36C2F;
-        color: #E36C2F;
+        border-color: var(--color-primary);
+        color: var(--color-primary);
     }
 
 
@@ -416,7 +419,7 @@
 
 
     .food-card {
-        background: #ffffff;
+        background: var(--color-white);
         border-radius: 12px;
         overflow: hidden;
         border: 1px solid #f0f0f0;
@@ -440,9 +443,9 @@
     }
 
     .food-content h3 {
-        font-size: 12px;
-        font-weight: 700;
-        color: #2d3748;
+        font-size: var(--font-xs);
+        font-weight: var(--weight-bold);
+        color: var(--color-black);
         margin-bottom: 4px;
         line-height: 1.3;
     }
@@ -473,17 +476,17 @@
     }
 
     .rating span {
-        font-size: 11px;
-        font-weight: 700;
-        color: #E36C2F;
+        font-size: var(--font-xs);
+        font-weight: var(--weight-bold);
+        color: var(--color-primary);
         margin-left: 3px;
     }
 
 
     .food-bottom h4 {
-        font-size: 12px;
-        font-weight: 700;
-        color: #E36C2F;
+        font-size: var(--font-xs);
+        font-weight: var(--weight-bold);
+        color: var(--color-primary);
         margin-top: 2px;
     }
 
@@ -494,7 +497,7 @@
         min-height: 100vh;
         padding: 25px 8px 30px;
         margin: 0;
-        background: #E36C2F;
+        background: var(--color-primary);
         box-sizing: border-box;
         overflow: hidden;
     }
@@ -520,7 +523,7 @@
     }
 
     .home-reservation-content h2 {
-        font-size: 20px;
+        font-size: var(--font-lg);
         line-height: 1.15;
         margin: 0 0 12px;
     }
@@ -550,9 +553,9 @@
     }
 
     .home-reservation {
-        background: #E36C2F;
+        background: var(--color-primary);
         padding: 40px 20px;
-        color: #fff;
+        color: var(--color-white);
     }
 
     .home-reservation-container {
@@ -565,10 +568,11 @@
 
     .home-reservation-tag {
         display: inline-block;
-        background: #111111;
-        color: #ffffff;
-        font-size: 11px;
-        font-weight: 700;
+        background: var(--color-black);
+        color: var(--color-white);
+        font-size: var(--font-xs);
+        font-weight: var(--weight-bold);
+        font-family: var(--font-family);
         letter-spacing: 1px;
         padding: 6px 14px;
         border-radius: 4px;
@@ -582,7 +586,7 @@
     }
 
     .home-reservation-content p {
-        font-size: 13px;
+        font-size: var(--font-xs);
         line-height: 1.6;
         opacity: 0.9;
         margin: 0 0 20px;
@@ -604,7 +608,7 @@
         flex-shrink: 0;
         width: 44px;
         height: 44px;
-        background: #fff;
+        background: var(--color-white);
         border-radius: 10%;
         display: flex;
         align-items: center;
@@ -617,13 +621,16 @@
     }
 
     .home-reservation-info .home-info-box h4 {
-        font-size: 13px;
-        font-weight: 600;
+        font-size: var(--font-sm);
+        font-weight: var(--weight-semibold);
+        font-family: var(--font-family);
         margin-bottom: 4px;
     }
 
     .home-reservation-info .home-info-box p {
-        font-size: 13px;
+        font-size: var(--font-xs);
+        font-family: var(--font-family);
+        font-size: var(--weight-regular);
         margin: 0;
         opacity: 0.9;
     }
@@ -637,7 +644,7 @@
     }
 
     .home-reservation-form h3 {
-        font-size: 22px;
+        font-size: var(--font-md);
         margin-bottom: 20px;
     }
 
@@ -679,9 +686,9 @@
     }
 
     .testimonial {
-        background-color: #1a1d20;
+        background-color: var(--color-black);
         padding: 50px 20px;
-        color: #ffffff;
+        color: var(--color-white);
     }
 
     .testimonial-container {
@@ -697,10 +704,11 @@
 
     .testimonial-tag {
         display: inline-block;
-        background-color: #E36C2F;
-        color: #ffffff;
+        background-color: var(--color-primary);
+        color: var(--color-white);
         font-size: 10px;
-        font-weight: 700;
+        font-weight: var(--weight-bold);
+        font-family: var(--font-family);
         padding: 6px 14px;
         border-radius: 4px;
         letter-spacing: 0.5px;
@@ -709,9 +717,10 @@
     }
 
     .testimonial-title h2 {
-        color: #ffffff;
+        color: var(--color-white);
         font-size: 22px;
-        font-weight: 800;
+        font-weight: var(--weight-bold);
+        font-family:var(--font-family) ;
         line-height: 1.3;
         letter-spacing: -0.2px;
         text-transform: uppercase;
@@ -748,15 +757,17 @@
     }
 
     .testimonial-card h3 {
-        color: #E36C2F;
-        font-size: 15px;
-        font-weight: 700;
+        color: var(--color-primary);
+        font-size: var(--font-md);
+        font-weight: var(--weight-bold);
+        font-family: var(--font-family);
         margin-bottom: 12px;
     }
 
     .testimonial-card p {
         color: #cbd5e0;
-        font-size: 12px;
+        font-size: var(--font-xs);
+        font-family: var(--font-family);
         line-height: 1.7;
         margin-bottom: 20px;
         font-style: normal;
@@ -785,9 +796,9 @@
     }
 
     .testimonial-footer .client h4 {
-        color: #E36C2F;
-        font-size: 12px;
-        font-weight: 700;
+        color: var(--color-primary);
+        font-size: var(--font-xs);
+        font-weight: var(--weight-bold);
         margin-bottom: 2px;
     }
 
@@ -811,7 +822,7 @@
 
 
     .news {
-        background-color: #ffffff;
+        background-color: var(--color-white);
         padding: 50px 20px;
     }
 
@@ -828,10 +839,11 @@
 
     .news-tag {
         display: inline-block;
-        background-color: #E36C2F;
-        color: #ffffff;
+        background-color: var(--color-primary);
+        color: var(--color-white);
         font-size: 10px;
-        font-weight: 700;
+        font-weight: var(--weight-bold);
+        font-family: var(--font-family);
         padding: 6px 14px;
         border-radius: 4px;
         letter-spacing: 0.5px;
@@ -841,8 +853,9 @@
 
     .news-title h2 {
         color: #1a202c;
-        font-size: 22px;
-        font-weight: 800;
+        font-size: var(--font-lg);
+        font-weight: var(--weight-bold);
+        font-family: var(--font-family);
         line-height: 1.3;
         letter-spacing: -0.2px;
         text-transform: uppercase;
@@ -893,9 +906,10 @@
         display: inline-flex;
         align-items: center;
         gap: 5px;
-        font-size: 11px;
+        font-size: var(--font-xs);
         color: #718096;
-        font-weight: 500;
+        font-weight: var(--weight-medium);
+        font-family: var(--font-family);
     }
 
     .news-meta img {
@@ -906,17 +920,19 @@
 
 
     .news-content h3 {
-        color: #1a202c;
-        font-size: 14px;
-        font-weight: 700;
+        color: var(--color-black);
+        font-size: var(--font-sm);
+        font-weight: var(--weight-bold);
+        font-family: var(--font-family);
         line-height: 1.4;
         margin: 0;
     }
 
 
     .news-content p {
-        color: #718096;
-        font-size: 11px;
+        color: var(--color-text);
+        font-size: var(--font-xs);
+        font-family: var(--font-family);
         line-height: 1.5;
         margin-top: 2px;
     }
@@ -926,9 +942,10 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        color: #E36C2F;
-        font-size: 11px;
-        font-weight: 700;
+        color: var(--color-primary);
+        font-size: var(--font-xs);
+        font-weight: var(--weight-bold);
+        font-family: var(--font-family);
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -962,8 +979,8 @@
 
 
     .reservation-hero-content h1 {
-        font-size: 30px;
-        font-weight: 700;
+        font-size: var(--font-xl);
+        font-weight: var(--weight-bold);
         letter-spacing: 2px;
         line-height: 1.2;
         margin-bottom: 4px;
@@ -973,8 +990,8 @@
 
 
     .breadcrumb {
-        font-size: 11px;
-        font-weight: 600;
+        font-size: var(--font-xs);
+        font-weight: var(--weight-semibold);
         letter-spacing: 1.5px;
         text-transform: uppercase;
         gap: 6px;
@@ -982,7 +999,7 @@
 
     .breadcrumb a,
     .breadcrumb span {
-        color: #ffffff;
+        color: var(--color-white);
         opacity: 0.95;
     }
 
@@ -1008,9 +1025,9 @@
 
 
     .form-group label {
-        font-size: 11px;
-        font-weight: 700;
-        color: #3d2f25;
+        font-size: var(--font-xs);
+        font-weight: var(--weight-bold);
+        color: var(--color-black);
         letter-spacing: 0.5px;
         margin-bottom: 6px;
         text-transform: uppercase;
@@ -1027,13 +1044,13 @@
     .input-icon select {
         width: 100%;
         height: 48px;
-        background: #ffffff;
+        background: var(--color-white);
         border: 1px solid #e6ddd2;
         border-radius: 2px;
         padding: 0 40px 0 14px;
-        font-family: 'Jost', sans-serif;
-        font-size: 13px;
-        color: #333333;
+        font-family: var(--font-family);
+        font-size: var(--font-xs);
+        color: var(--color-black);
         outline: none;
         box-sizing: border-box;
     }
@@ -1045,7 +1062,7 @@
 
     .input-icon input:focus,
     .input-icon select:focus {
-        border-color: #E36C2F;
+        border-color: var(--color-primary);
     }
 
 
@@ -1068,13 +1085,13 @@
     .full textarea {
         width: 100%;
         height: 100px;
-        background: #ffffff;
+        background: var(--color-white);
         border: 1px solid #e6ddd2;
         border-radius: 2px;
         padding: 12px 14px;
-        font-family: 'Jost', sans-serif;
-        font-size: 13px;
-        color: #333333;
+        font-family: var(--font-family);
+        font-size: var(--font-sm);
+        color: var(--color-black);
         outline: none;
         resize: none;
         box-sizing: border-box;
@@ -1155,6 +1172,7 @@
         color: #ffffff;
         font-size: 10px;
         font-weight: 700;
+        font-family: var(--font-family);
         padding: 6px 16px;
         border-radius: 20px;
         letter-spacing: 0.8px;
@@ -1165,7 +1183,8 @@
 
     .opening-card h2 {
         font-size: 22px;
-        font-weight: 800;
+        font-weight: 700;
+        font-family: var(--font-family);
         color: #1a1d20;
         margin-bottom: 24px;
         letter-spacing: 0.5px;
@@ -1188,6 +1207,7 @@
     .day {
         font-size: 10px;
         font-weight: 700;
+        font-family: var(--font-family);
         color: #333333;
         letter-spacing: 0.5px;
     }
@@ -1208,6 +1228,7 @@
         color: #E36C2F;
         font-size: 13px;
         font-weight: 700;
+        font-family: var(--font-family);
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -1256,6 +1277,7 @@
     .hero-content h1 {
         font-size: 30px;
         font-weight: 700;
+        font-family: var(--font-family);
         letter-spacing: 2px;
         line-height: 1.2;
         margin-bottom: 4px;
@@ -1267,6 +1289,7 @@
     .breadcrumb {
         font-size: 11px;
         font-weight: 600;
+        font-family: var(--font-family);
         letter-spacing: 1.5px;
         text-transform: uppercase;
         gap: 6px;
@@ -1297,6 +1320,7 @@
         color: #ffffff;
         font-size: 11px;
         font-weight: 700;
+        font-family: var(--font-family); 
         padding: 6px 18px;
         border-radius: 20px;
         letter-spacing: 0.8px;
@@ -1306,7 +1330,8 @@
 
     .menu-header h2 {
         font-size: 22px;
-        font-weight: 800;
+        font-weight: 700;
+        font-family: var(--font-family);
         color: #111111;
         margin-top: 14px;
         line-height: 1.3;
@@ -1344,6 +1369,7 @@
     .column-title span {
         font-size: 11px;
         font-weight: 700;
+        font-family: var(--font-family); 
         letter-spacing: 1.5px;
         color: #222222;
     }
@@ -1355,7 +1381,8 @@
 
     .column-title h3 {
         font-size: 20px;
-        font-weight: 800;
+        font-weight: 700;
+        font-family: var(--font-family);
         color: #111111;
         margin-top: 6px;
         text-transform: uppercase;
@@ -1391,6 +1418,7 @@
     .food-head h4 {
         font-size: 15px;
         font-weight: 700;
+        font-family: var(--font-family); 
         color: #111111;
         margin: 0;
         white-space: nowrap;
@@ -1409,6 +1437,7 @@
         color: #E36C2F;
         font-weight: 700;
         font-size: 14px;
+        font-family: var(--font-family); 
         white-space: nowrap;
     }
 
@@ -1417,6 +1446,7 @@
         margin-top: 4px;
         color: #777777;
         font-size: 12px;
+        font-family: var(--font-family); 
         line-height: 1.4;
     }
 
@@ -1548,8 +1578,9 @@
 
 
     .hero-content h1 {
-        font-size: 32px;
-        font-weight: 800;
+        font-size: 30px;
+        font-weight: 700;
+        font-family: var(--font-family);
         letter-spacing: 2px;
         line-height: 1.2;
         margin-bottom: 4px;
@@ -1561,6 +1592,7 @@
     .breadcrumb {
         font-size: 11px;
         font-weight: 700;
+        font-family: var(--font-family); 
         letter-spacing: 1.5px;
         text-transform: uppercase;
         gap: 6px;
@@ -1649,6 +1681,7 @@
         color: #ffffff;
         font-size: 11px;
         font-weight: 700;
+         font-family: var(--font-family);
         padding: 6px 14px;
         border-radius: 6px;
         letter-spacing: 0.8px;
@@ -1659,7 +1692,8 @@
 
     .about-text h2 {
         font-size: 24px;
-        font-weight: 800;
+        font-weight: 700;
+         font-family: var(--font-family);
         color: #111111;
         line-height: 1.25;
         letter-spacing: 0.5px;
@@ -1684,8 +1718,9 @@
         background-color: #e36c2f;
         color: #ffffff;
         text-align: center;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 700;
+         font-family: var(--font-family);
         letter-spacing: 1px;
         border-radius: 6px;
         text-transform: uppercase;
@@ -1719,6 +1754,7 @@
         color: #ffffff;
         font-size: 11px;
         font-weight: 700;
+         font-family: var(--font-family);
         padding: 6px 18px;
         border-radius: 20px;
         letter-spacing: 0.8px;
@@ -1729,7 +1765,8 @@
 
     .features .section-title h2 {
         font-size: 22px;
-        font-weight: 800;
+        font-weight: 700;
+         font-family: var(--font-family);
         color: #111111;
         letter-spacing: 0.5px;
         margin-top: 0;
@@ -1777,13 +1814,15 @@
     .feature-card h3 {
         font-size: 18px;
         font-weight: 700;
+         font-family: var(--font-family);
         color: #111111;
         margin-bottom: 12px;
     }
 
 
     .feature-card p {
-        font-size: 13px;
+        font-size: 12px;
+         font-family: var(--font-family);
         color: #666666;
         line-height: 1.6;
         margin-bottom: 22px;
@@ -1800,6 +1839,7 @@
         background: transparent;
         font-size: 12px;
         font-weight: 700;
+         font-family: var(--font-family);
         letter-spacing: 0.8px;
         text-transform: uppercase;
         display: inline-flex;
@@ -1839,6 +1879,7 @@
         color: #ffffff;
         font-size: 11px;
         font-weight: 700;
+         font-family: var(--font-family);
         padding: 6px 18px;
         border-radius: 20px;
         letter-spacing: 0.8px;
@@ -1848,8 +1889,9 @@
 
 
     .chefs .section-title h2 {
-        font-size: 22px;
-        font-weight: 800;
+        font-size: 20px;
+        font-weight: 700;
+         font-family: var(--font-family);
         color: #111111;
         letter-spacing: 0.5px;
         margin-top: 0;
@@ -1900,7 +1942,8 @@
 
     .chef-content h3 {
         font-size: 18px;
-        font-weight: 800;
+        font-weight: 700;
+         font-family: var(--font-family);
         color: #111111;
         margin-bottom: 10px;
         text-transform: uppercase;
@@ -1908,7 +1951,8 @@
     }
 
     .chef-content p {
-        font-size: 13px;
+        font-size: 12px;
+         font-family: var(--font-family);
         color: #666666;
         line-height: 1.6;
         margin: 0 auto;
@@ -1971,8 +2015,9 @@
 
 
     .banner-content h1 {
-        font-size: 32px;
-        font-weight: 800;
+        font-size: 30px;
+        font-weight: 700;
+         font-family: var(--font-family);
         letter-spacing: 2px;
         line-height: 1.2;
         margin-bottom: 4px;
@@ -1984,6 +2029,7 @@
     .breadcrumb {
         font-size: 11px;
         font-weight: 700;
+         font-family: var(--font-family);
         letter-spacing: 1.5px;
         text-transform: uppercase;
         gap: 6px;
@@ -2047,6 +2093,7 @@
         color: #ffffff;
         font-size: 10px;
         font-weight: 700;
+        font-family: var(--font-family);
         padding: 5px 12px;
         border-radius: 14px;
         letter-spacing: 0.6px;
@@ -2082,8 +2129,9 @@
 
 
     .blog-content h2 {
-        font-size: 17px;
-        font-weight: 800;
+        font-size: 18px;
+        font-weight: 700;
+         font-family: var(--font-family);
         color: #111111;
         line-height: 1.3;
         margin-bottom: 10px;
@@ -2093,7 +2141,8 @@
 
 
     .blog-content p {
-        font-size: 13px;
+        font-size: 12px;
+         font-family: var(--font-family);
         color: #666666;
         line-height: 1.55;
         margin-bottom: 16px;
@@ -2107,6 +2156,7 @@
         color: #e36c2f;
         font-size: 12px;
         font-weight: 700;
+         font-family: var(--font-family);
         letter-spacing: 0.8px;
         text-transform: uppercase;
         text-decoration: none;
@@ -2135,6 +2185,7 @@
         color: #333333;
         font-size: 14px;
         font-weight: 700;
+         font-family: var(--font-family);
         text-decoration: none;
         display: inline-flex;
         align-items: center;
@@ -2164,7 +2215,8 @@
 
     .widget h3 {
         font-size: 16px;
-        font-weight: 800;
+        font-weight: 700;
+         font-family: var(--font-family);
         color: #111111;
         letter-spacing: 0.5px;
         margin-bottom: 20px;
@@ -2186,7 +2238,8 @@
         height: 42px;
         border: none;
         padding: 0 14px;
-        font-size: 13px;
+        font-size: 12px;
+         font-family: var(--font-family);
         color: #333333;
         background: transparent;
         outline: none;
@@ -2249,13 +2302,15 @@
     }
 
     .post-author span {
-        font-size: 11px;
+        font-size: 12px;
+         font-family: var(--font-family);
         color: #888888;
     }
 
     .recent-content h4 {
         font-size: 13px;
         font-weight: 700;
+         font-family: var(--font-family);
         color: #111111;
         line-height: 1.35;
         margin: 0;
@@ -2280,7 +2335,8 @@
     }
 
     .category-list span {
-        font-size: 13px;
+        font-size: 14px;
+         font-family: var(--font-family);
         font-weight: 500;
         color: #555555;
     }
@@ -2322,8 +2378,9 @@
         padding: 0 14px;
         background: #ffffff;
         color: #444444;
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 700;
+         font-family: var(--font-family);
         border-radius: 6px;
         border: 1px solid #eaeaea;
         text-transform: uppercase;
@@ -2394,7 +2451,6 @@
         gap: 12px;
     }
 
-    /* reset any desktop spans first */
     .item-large,
     .item-wide,
     .item-tall,
@@ -2404,7 +2460,6 @@
         grid-row: span 1;
     }
 
-    /* repeating pattern of varied sizes, cycles every 7 items */
     .gallery-item:nth-child(7n+1) {
         grid-column: span 2;
         grid-row: span 2;
@@ -2455,7 +2510,8 @@
         height: 34px;
         right: 12px;
         bottom: 12px;
-        font-size: 15px;
+        font-size: 16px;
+         font-family: var(--font-family);
     }
 
     .delete-upload {
@@ -2583,6 +2639,7 @@
         font-size: 24px;
         margin-bottom: 20px;
         padding-bottom: 10px;
+         font-family: var(--font-family);
     }
 
     .footer-col p {
@@ -2593,6 +2650,7 @@
     .footer-col h3 {
         font-size: 15px;
         margin-bottom: 18px;
+         font-family: var(--font-family);
     }
 
     .footer-col ul li {
@@ -2601,6 +2659,7 @@
 
     .footer-col ul li a {
         font-size: 15px;
+         font-family: var(--font-family);
     }
 
     .social-icons {
@@ -2612,6 +2671,7 @@
         width: 34px;
         height: 34px;
         font-size: 14px;
+         font-family: var(--font-family);
         background: #2a2a2a;
         color: #fff;
     }
@@ -2627,7 +2687,8 @@
 
     .newsletter input {
         padding: 14px;
-        font-size: 15px;
+        font-size: 16px;
+         font-family: var(--font-family);
     }
 
     .footer-bottom {
@@ -2640,6 +2701,7 @@
 
     .footer-bottom p {
         font-size: 13px;
+         font-family: var(--font-family);
     }
 
     .bottom-links {
@@ -2648,11 +2710,7 @@
 
     .bottom-links a {
         font-size: 13px;
+        font-family: var(--font-family);
     }
-
-
-
-
-
 
 }
